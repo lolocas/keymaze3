@@ -1,0 +1,93 @@
+
+.login-form
+{
+    border:solid 1px #427FDA;
+    background-color:#E6EAF1;
+    max-width:250px;
+    width:100%;
+    padding:10px;
+    border-radius:10px;
+    -moz-border-radius: 10px;
+    float:left;
+    /* raul: align it centered */ 
+    margin-top:20px;
+    text-align: center;
+}
+
+.login-biometrie
+{
+    padding-left:10px;
+    float:left;
+    margin-top:20px;
+    text-align: left;
+}
+
+/*.login-container label
+{
+    text-align:center;
+    width:100%
+}*/
+
+h1
+{
+    color:#427FDC;
+    font-size:36pt;
+    font-weight:bold;
+    text-align:center
+}
+
+.clear
+{
+    clear:both
+}
+
+.mainscreenLogin {
+    position: fixed; 
+    top: 20%;
+}
+.imgContainer, .loginContainer {
+    width:50%;
+    float:left;
+}
+.imgContainer {
+        text-align:right;
+    }
+    .imgContainer > img {
+        max-width:300px;width:100%;
+    }
+
+@media (max-height: 500px) {
+    .mainscreenLogin {
+        top:10%;
+    }
+}
+@media (max-height: 350px) {
+    .mainscreenLogin {
+        top:0%;
+    }
+}
+
+@media (max-width: 550px) {
+    h1 {
+        font-size:20pt;
+        margin:0;
+    }
+    .mainscreenLogin {
+        top:0;
+    }
+
+    .imgContainer, .loginContainer {
+        width:100%;
+        float:none;
+    }
+
+     .login-form {
+        float:none;
+    }
+    .imgContainer {
+        text-align:center;
+    }
+
+}
+
+

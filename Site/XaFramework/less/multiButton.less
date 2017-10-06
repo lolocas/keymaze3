@@ -1,0 +1,35 @@
+﻿@import "mixins.less";
+@import "buttons.less";
+.multiButton
+{
+    margin-left: 10px;
+    display: block;
+    float: left;
+
+    .xaButton
+    {
+        color:white;
+        line-height:18px;
+        .edl-button-gradient( rgb(195, 205, 227) , rgb(142, 161, 202));
+     
+
+        &:hover,
+        &.selected {            
+            border: 1px solid #c1c3ca;            
+            /*border: 1px solid #248ee0;*/
+            .edl-button-on-gradient(  rgb(139, 195, 239), rgb(85, 167, 231), rgb(36, 142, 224), rgb(101, 175, 232));
+           
+        }
+    }
+
+    .dropdown-menu
+    {
+        top: auto;
+        bottom: 35px;
+        z-index: 1400;
+    }
+} 
+
+.multiButton .btn.footerButton { 
+    height:33px;
+}

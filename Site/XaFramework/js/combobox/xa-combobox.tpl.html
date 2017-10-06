@@ -1,0 +1,13 @@
+﻿<div class="xa-combobox xaInputControl" ng-class="{'controlDisabled': !canedit}">
+    <div class="right-inner-addon">
+        <i class="glyphicon xaHideOnDisable glyphicon-chevron-down" tabindex="-1" ></i>
+        <input type="text"
+               xa-combo-box-input=""
+               ng-model="dataSource.displayText"
+               ng-disabled="!canedit"
+               ng-trim=":false"
+               class="form-control xaValidationTooltip"
+               autocomplete="off"
+               ng-class="{'xaDisabledIgnore': !canedit }" />
+    </div>
+</div> 

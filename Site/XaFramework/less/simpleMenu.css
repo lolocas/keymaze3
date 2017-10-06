@@ -1,0 +1,79 @@
+div.simpleMenu {
+  cursor: pointer;
+  cursor: hand;
+  color: white;
+  float: left;
+  width: auto;
+  height: 46px;
+  line-height: 26px;
+  position: relative;
+  padding: 4px;
+  margin-top: 4px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+div.simpleMenu .head {
+  margin-bottom: 0;
+  color: white;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  padding-left: 1px;
+  padding-right: 1px;
+}
+div.simpleMenu .selText {
+  display: block;
+}
+div.simpleMenu .currSel {
+  font-weight: bold;
+}
+.listMenu.menuAccordion {
+  background-color: #D4ECFF;
+}
+.listMenu.menuAccordion ul {
+  padding: 0;
+  margin: 0;
+}
+.listMenu.menuAccordion .panel-group {
+  margin: 0;
+}
+.listMenu.menuAccordion .panel-group .panel {
+  margin: 0;
+}
+.listMenu.menuAccordion .panel-body {
+  padding: 0;
+}
+.listMenu.menuAccordion .panel-body ul > li.active {
+  font-weight: bold;
+}
+.listMenu.menuAccordion .panel-body ul > li > a:hover {
+  background-color: #b3d2ed;
+}
+.listMenu.menuDropdown {
+  line-height: normal;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  width: 220px;
+  border: solid 1px #006DC0;
+  box-shadow: 2px 3px 52px rgba(0, 0, 0, 0.5);
+}
+.listMenu.menuDropdown,
+.listMenu.menuDropdown li {
+  list-style-type: none;
+  z-index: 1100;
+}
+.listMenu.menuDropdown a,
+.listMenu.menuDropdown li a {
+  display: block;
+  padding: 2px 5px;
+  background-color: #D4ECFF;
+}
+.listMenu.menuDropdown a.active,
+.listMenu.menuDropdown li a.active {
+  background-color: #006DC0;
+  color: #D4ECFF;
+  text-decoration: none;
+}

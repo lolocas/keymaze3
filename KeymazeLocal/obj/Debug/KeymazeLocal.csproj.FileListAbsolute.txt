@@ -1,0 +1,16 @@
+D:\Sources\KeyMaze3\KeymazeLocal\bin\Debug\KeymazeLocal.exe.config
+D:\Sources\KeyMaze3\KeymazeLocal\bin\Debug\KeymazeLocal.exe
+D:\Sources\KeyMaze3\KeymazeLocal\bin\Debug\KeymazeLocal.pdb
+D:\Sources\KeyMaze3\KeymazeLocal\obj\Debug\KeymazeLocal.csprojResolveAssemblyReference.cache
+D:\Sources\KeyMaze3\KeymazeLocal\obj\Debug\KeymazeLocal.exe
+D:\Sources\KeyMaze3\KeymazeLocal\obj\Debug\KeymazeLocal.pdb
+D:\Sources\KeyMaze3\KeymazeLocal\bin\Debug\System.Data.SQLite.dll
+D:\Sources\KeyMaze3\KeymazeLocal\bin\Debug\Newtonsoft.Json.dll
+D:\Sources\KeyMaze3\KeymazeLocal\bin\Debug\Newtonsoft.Json.xml
+D:\Sources\KeyMaze3\KeymazeLocal\bin\Debug\EntityFramework.dll
+D:\Sources\KeyMaze3\KeymazeLocal\bin\Debug\EntityFramework.SqlServer.dll
+D:\Sources\KeyMaze3\KeymazeLocal\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Sources\KeyMaze3\KeymazeLocal\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Sources\KeyMaze3\KeymazeLocal\bin\Debug\EntityFramework.xml
+D:\Sources\KeyMaze3\KeymazeLocal\bin\Debug\EntityFramework.SqlServer.xml
+D:\Sources\KeyMaze3\KeymazeLocal\bin\Debug\System.Data.SQLite.xml

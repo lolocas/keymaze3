@@ -1,0 +1,12 @@
+﻿<div class="listType action-bar-background" ng-click="toggle()" title="{{value.text}}">
+    <div class="sel-bg-hoverable"></div>
+    <div class="head">
+        <span class="selText">{{:: currSelText}}</span>
+        <span class="currSel truncate {{ inputValue.style }}">{{inputValue.text}}</span>
+    </div>
+    <ul class="ng-hide listMenu ngShowAnimation" ng-show="showListSelection">
+        <li ng-repeat="opt in options track by $index" ng-title="opt.val" ng-mouseenter="activateIndex($index)">
+            <a ng-click="changeFn(opt)" href="javascript:void(0);" test-id="{{::opt.resourceKey}}" ng-class="{ active: isActive($index) }">{{::opt.text}}</a>
+        </li>
+    </ul>
+</div>

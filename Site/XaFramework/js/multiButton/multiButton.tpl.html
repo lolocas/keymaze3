@@ -1,0 +1,12 @@
+﻿<div class="btn-group multiButton xaInputControl"> 
+  <button type="button" class="btn xaButton" ng-click="actionClick(selectedAction,$event)" test-id="mbtn{{ selectedAction.label | uppercase }}">{{ selectedAction.label }}</button>
+  <button type="button" class="btn xaButton dropdown-toggle" ng-disabled="!enableMenu" ng-click="toggleMenu($event)" test-id="btnChangeAction">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu" role="menu" ng-show="enableMenu">
+    <li ng-repeat="action in menuActions track by action.code">
+        <a href="javascript:void(0);" test-id="{{ ::action.testId }}" ng-click="actionClick(action, $event)">{{ ::action.label }}</a>
+    </li>
+  </ul>
+</div>

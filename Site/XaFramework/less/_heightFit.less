@@ -1,0 +1,65 @@
+﻿
+div.backdrop {
+    z-index:1000;
+    position:absolute;
+    top:0;bottom:0;left:0;right:0;
+    //background-color:transparent: no working in IE10. need to 
+    background-color:white;
+    opacity:0;   
+}
+
+.fitParentWidthHeight {
+    display:block;
+    position:absolute;
+    bottom:0;top:0;
+    left:0; right:0;
+}
+
+.htmlViewer.fitParentWidthHeight > iframe.inheritFit,
+.xmlData.fitParentWidthHeight .htmlContent.inheritFit > iframe.inheritFit
+ {
+    width:100%;
+    height:99%; //iframes have special behaviour + height of 100% causes a tiny scroll
+    background-color:white;
+}
+
+.fitParentWidthHeight .htmlContent.inheritFit {
+    display:block;
+    position:absolute;
+    bottom:0;
+    left:0; right:0;
+    top:85px; //xmlData content needs to leave room for tabs
+}
+.fitParentWidthHeight.gridContainer {
+    border:none !important; //grid border causes a scrollbar, so we just hide it!
+}
+
+//special behaviour for tab:
+.tabStandalone.fitParentWidthHeight { 
+   
+    > .nav-tabs {
+        position:absolute;
+        top:0;left:0;right:0;
+        width:100%;
+        background-color:#CEDEEF;
+    }
+    > .tab-content {
+        position:absolute;
+        top:50px;
+        bottom:0;
+        left:0;
+        right:0;
+        overflow:auto;
+    }
+}
+
+.fitParentHeight {
+    position:absolute;
+    top:0;
+    bottom:0;
+    height: 100%;
+}
+.fitParentWidth {
+    position:absolute;
+    left:0;right:0;
+}

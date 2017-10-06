@@ -1,0 +1,42 @@
+﻿@import "mixins.less";
+
+.error-body {
+    padding: 10px;
+
+    > div {
+        padding: 2px 0;
+    }
+
+    .field {
+        font-weight: bold;
+        display: inline-block;
+    }
+}
+
+.error-window {
+
+    .modal-content {
+        background: transparent;
+    }
+
+    .window {
+
+        .modal-header {
+            background: #cedeef url('../img/popup/error_header_gradient.png') repeat-x;  
+
+           /* h1 {
+                color: #ECECEC;
+                -webkit-text-shadow: 1px 1px 3px #000;
+                text-shadow: 1px 1px 3px #000;
+            }*/
+        }
+
+        .modal-body {
+            background: #ffffff;
+        }
+
+        .modal-footer {
+            background: #cedeef url('../img/popup/error_footer_gradient.png') repeat-x;
+        }
+    }
+}

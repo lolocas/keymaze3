@@ -1,0 +1,137 @@
+#widgetContainer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999999;
+  overflow: auto;
+  background-color: white;
+}
+#widgetContainer .rowStart {
+  page-break-before: auto;
+}
+#widgetContainer .rowStart:before {
+  clear: both;
+}
+#widgetContainer .wContainer {
+  page-break-inside: avoid;
+}
+#widgetContainer .widget-row {
+  float: left;
+  width: 100%;
+}
+#widgetContainer .widget h2.title {
+  font-size: 14px;
+}
+#widgetContainer .widget .table {
+  font-size: 12px;
+}
+@media print {
+  #widgetContainer {
+    visibility: visible;
+    float: left;
+    position: static;
+  }
+  #widgetContainer .widgetMenu {
+    display: none;
+  }
+}
+.hasWidgets {
+  overflow: auto;
+}
+/* Revoir le media print */
+@media print {
+  body.hideBodyForWidgetPrint {
+    visibility: hidden;
+  }
+}
+.widgetContainer {
+  float: left;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+}
+.widgetContainer .rowStart::before {
+  clear: both;
+}
+.widgetContainer .widgetBackdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  opacity: .9;
+  z-index: 1000;
+}
+@media print {
+  .widgetContainer .wContainer.selected .widgetMenu {
+    display: none;
+  }
+  .widgetContainer .selected .widget {
+    box-shadow: none;
+  }
+  .widgetContainer .rowStart {
+    page-break-before: auto;
+  }
+}
+.wContainer {
+  width: 100%;
+  float: left;
+  padding: 10px;
+}
+.wContainer.half {
+  width: 50%;
+}
+.wContainer.selected .widget {
+  -webkit-box-shadow: 7px 7px 5px 0 rgba(50, 50, 50, 0.4);
+  -moz-box-shadow: 7px 7px 5px 0 rgba(50, 50, 50, 0.4);
+  box-shadow: 7px 7px 5px 0 rgba(50, 50, 50, 0.4);
+}
+.wContainer.selected .widgetMenu {
+  display: block;
+}
+.wContainer .widgetMenu {
+  display: none;
+  list-style-type: none;
+  position: absolute;
+  background-color: white;
+  opacity: .8;
+  margin: 0;
+  padding: 0;
+  top: 10px;
+  right: 10px;
+  line-height: 35px;
+  height: auto;
+}
+.wContainer .widgetMenu li {
+  float: left;
+  width: auto;
+}
+.wContainer .widgetMenu a {
+  color: #006DC0;
+  padding-left: 8px;
+  display: block;
+  float: left;
+}
+.wContainer .widgetMenu a:hover {
+  color: black;
+}
+.wContainer .widget h2.title {
+  background-color: #cedeef;
+  color: black;
+  padding: 7px;
+  font-size: 20px;
+  margin: 0;
+}
+.wContainer .widget .body {
+  border: solid 1px #cedeef;
+  background-color: white;
+  padding: 10px;
+  min-height: 100px;
+  position: relative;
+  overflow: auto;
+}

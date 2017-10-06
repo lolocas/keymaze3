@@ -1,0 +1,14 @@
+﻿<div class="ng-hide listMenu ngShowAnimation menuDropdown menuAccordion" ng-show="showListSelection">
+    <xa-accordion close-others="true">
+        <xa-accordion-group ng-repeat="opt in options track by $index" resource-key="{{::opt.resourceKey}}" is-open="opt.isOpen">
+            <ul>
+                <li ng-repeat="l2 in opt.items" ng-class="{ 'active': l2 == selectedItem }">
+                    <a ng-click="changeFn(l2);" test-id="{{:: l2.testId}}">
+                         <img ng-src="{{::l2.icon}}" ng-if="l2.icon" />
+                        {{l2.text}}
+                    </a>
+                </li>
+            </ul>
+        </xa-accordion-group>
+    </xa-accordion>
+</div>

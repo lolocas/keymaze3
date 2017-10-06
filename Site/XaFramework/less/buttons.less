@@ -1,0 +1,199 @@
+﻿@import "mixins.less";
+
+/* Gradient generated from edl images on http://gradientfinder.com/ */
+
+.edl-button-on-gradient(@color1, @color2, @color3, @color4) {
+    background: -webkit-linear-gradient(top, @color1 0%, @color2 28%, @color3 51%, @color4 100%);
+    background: -o-linear-gradient(top, @color1 0%, @color2 28%, @color3 51%, @color4 100%);
+    background: -ms-linear-gradient(top, @color1 0%, @color2 28%, @color3 51%, @color4 100%);
+    background: -moz-linear-gradient(top, @color1 0%, @color2 28%, @color3 51%,@color4 100%);
+    background: linear-gradient(to bottom, @color1 0%,@color2 28%,@color3 51%, @color4 100%);
+}
+
+.edl-button-gradient(@color1, @color2) {
+    background: -webkit-linear-gradient(top, @color1 0%,@color2 53%);
+    background: -o-linear-gradient(top, @color1 0%, @color2 53%);
+    background: -ms-linear-gradient(top, @color1 0%, @color2 53%);
+    background: -moz-linear-gradient(top, @color1 0%, @color2 53%);
+    background: linear-gradient(to bottom, @color1 0%, @color2 53%);
+}
+
+.xang {
+    &.xa-form-button {
+        display: inline-block;
+        padding: 0;
+        border-radius: 4px;
+        text-align: center;
+        font-size: 11px;
+        /*height: 30px;*/
+        line-height: 30px;
+        cursor: pointer;
+        .box-sizing();
+        .user-select();
+        /*.transition(all 0.2s ease);*/
+        border: 1px solid #8c8c8c;
+        -moz-box-sizing: padding-box;
+        -webkit-box-sizing: padding-box;
+        box-sizing: padding-box;
+        /*text-shadow: 0 1px 3px #070A36;*/
+        color: #fff;
+        overflow: hidden;
+
+        .back {
+            border: 1px solid #8ea1ca;
+            .edl-button-gradient( rgb(195, 205, 227), rgb(142, 161, 202));
+            line-height: 28px;
+            padding: 0 5px;
+            font-size: 14px;
+        }
+
+        &.selected {
+            border: 1px solid #c1c3ca;
+
+            .back {
+                border: 1px solid #248ee0;
+                .edl-button-on-gradient( rgb(139, 195, 239), rgb(85, 167, 231), rgb(36, 142, 224), rgb(101, 175, 232));
+
+            
+            }
+
+            color: white;
+             //box-shadow: 0 0 5px rgba(149, 150, 153, 0.72);
+        }
+
+        &.green {
+            .back {
+                border: 1px solid #079234;
+                .edl-button-gradient( rgb(195, 227, 206), #05bd40);
+            }
+
+            &.selected {
+                .back {
+                    border: 1px solid #079234;
+                    .edl-button-on-gradient( #59d142, #05bd40,#079234, #59d142);
+                }
+            }
+        }
+
+        &.orange {
+            .back {
+                border: 1px solid #FF6C32;
+                .edl-button-gradient(  #FFBE47, #FF8142);
+            }
+
+            &.selected {
+                .back {
+                    border: 1px solid #FF6C32;
+                    .edl-button-on-gradient(#FFBE47 , #FF7F3A , #ff5b1a , #FF8142);
+                }
+            }
+        }
+
+
+        &.disabled {
+            color: #8c8c8c;
+            border: 1px solid #ccc;
+
+            .back {
+                border: 1px solid #c0c0c0;
+                .gradient-button-disabled();
+            }
+            /*border-color: #d6d6d6;
+            text-shadow: none;*/
+        }
+
+        &.disabled.selected {
+            color: #444;
+            border: 1px solid #777;
+        }
+    }
+}
+
+//added by raul, for footer buttons
+.edl-action-button-gradient() {
+    background: #ffffff;
+    background: -moz-linear-gradient(top, #ffffff 0%, #b7d8ff 35%, #65acff 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(35%,#b7d8ff), color-stop(100%,#65acff));
+    background: -webkit-linear-gradient(top, #ffffff 0%,#b7d8ff 35%,#65acff 100%);
+    background: -o-linear-gradient(top, #ffffff 0%,#b7d8ff 35%,#65acff 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%,#b7d8ff 35%,#65acff 100%);
+    background: linear-gradient(to bottom, #ffffff 0%,#b7d8ff 35%,#65acff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#65acff',GradientType=0 );
+
+}
+
+.edl-action-button-hover-gradient() {
+    background: #ffffff;
+    background: -moz-linear-gradient(top, #ffffff 0%, #b7d8ff 35%, #9ecbff 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(35%,#b7d8ff), color-stop(100%,#9ecbff));
+    background: -webkit-linear-gradient(top, #ffffff 0%,#b7d8ff 35%,#9ecbff 100%);
+    background: -o-linear-gradient(top, #ffffff 0%,#b7d8ff 35%,#9ecbff 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%,#b7d8ff 35%,#9ecbff 100%);
+    background: linear-gradient(to bottom, #ffffff 0%,#b7d8ff 35%,#9ecbff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#9ecbff',GradientType=0 );
+
+}
+
+.xaButton
+{
+    color: black;
+    border-bottom: none;
+
+    .edl-action-button-gradient();
+}
+    .xaButton:hover
+    {
+    .edl-action-button-hover-gradient();
+}
+
+    .btn-group>.xaButton+.dropdown-toggle
+{
+    border-left: 1px solid #8c8c8c;
+}
+
+ul.radioList {
+    list-style-type: none;
+        float:left;width:100%;
+        margin:0;padding:0;
+
+    li {
+        float: left;
+        padding: 5px;
+
+        a {
+            display: block;
+            width: 100%;
+            float: left;
+
+                &.disabled {
+                    cursor:not-allowed;
+                    color:#666;
+
+                    span.icon {
+                        background: transparent url(../img/radio/radio-sprite.png) no-repeat center -145px;
+                    }
+
+                    
+                    &.selected span.icon {
+                        background: transparent url(../img/radio/radio-sprite.png) no-repeat center -163px;
+                    }
+
+                }
+                
+                span {
+                    display:block;
+                    float:left;
+
+                &.icon {
+                    margin-top: 2px;
+                        width:25px;height:15px;
+                    background: transparent url(../img/radio/radio-sprite.png) no-repeat center -1px;
+                }
+            }
+
+            &.selected span.icon {
+                background: transparent url(../img/radio/radio-sprite.png) no-repeat center -73px;
+            }
+        }
+    }
+    } 

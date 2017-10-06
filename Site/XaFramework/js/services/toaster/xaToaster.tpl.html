@@ -1,0 +1,13 @@
+﻿<div id="toast-container" ng-class="config.position">
+    <div ng-repeat="toaster in toasters track by $index" class="toast" ng-class="toaster.type" ng-click="click(toaster)" ng-mouseover="stopTimer(toaster)" ng-mouseout="restartTimer(toaster)">
+        <button class="toast-close-button" ng-show="config.closeButton">&times;</button>
+        <div ng-class="config.title">{{toaster.title}}</div>
+        <div ng-class="config.message" ng-switch on="toaster.bodyOutputType">
+            <div ng-switch-when="trustedHtml" ng-bind-html="toaster.html"></div>
+            <div ng-switch-when="template">
+                <div ng-include="toaster.bodyTemplate"></div>
+            </div>
+            <div ng-switch-default><p class="toast-message">{{toaster.body}}</p></div>
+        </div>
+    </div>
+</div>

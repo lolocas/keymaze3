@@ -1,0 +1,38 @@
+﻿<div class="xa-date-picker date-picker xaInputControl" ng-class="{'controlDisabled': !canedit}">
+
+	<div class="xa-date-picker-wrap">
+
+        <input type="text"
+               class="form-control xaValidationTooltip xaDatePicker"
+               ng-class="{focus: focus}"
+               ng-model="displayValue"
+               ng-model-options="{ updateOn: 'blur' }"
+               placeholder="{{datePlaceholder}}"
+               ng-disabled="!canedit" maxlength="10" />
+
+		<div class="date-picker-buttons" ng-show="!isDisabled">
+			<div class="date-picker-button left xaHideOnDisable">
+
+				<div class="up" ng-click="up()">
+					<span class="helper">
+						<i class="glyphicon glyphicon-chevron-up"></i>
+					</span>
+				</div>
+
+				<div class="down" ng-click="down()">
+					<span class="helper">
+						<i class="glyphicon glyphicon-chevron-down"></i>
+					</span>
+				</div>
+			</div>
+
+			<div class="date-picker-button right toggle xaHideOnDisable" ng-click="toggle()">
+				<span class="helper">
+					<i class="glyphicon glyphicon-calendar"></i>
+				</span>
+			</div>
+		</div>
+
+	</div>
+
+</div>

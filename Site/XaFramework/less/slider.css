@@ -1,0 +1,54 @@
+.xa-slider {
+  position: relative;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 10px;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: #ededed;
+  border: 1px solid #dfdfdf;
+}
+.xa-slider.xa-slider-enabled {
+  background-color: #fff;
+  border: 1px solid #BDBDBD;
+}
+.xa-slider.xa-slider-enabled .xa-slider-dragging .xa-slider-wrap {
+  cursor: w-resize;
+}
+.xa-slider.xa-slider-enabled .xa-slider-animated .xa-slider-handle {
+  -moz-transition: left 0.15s ease;
+  -o-transition: left 0.15s ease;
+  -webkit-transition: left 0.15s ease;
+  transition: left 0.15s ease;
+}
+.xa-slider.xa-slider-enabled .xa-slider-wrap {
+  cursor: pointer;
+}
+.xa-slider.xa-slider-enabled .xa-slider-handle {
+  background-color: #B0C5EF;
+  border: 1px solid gray;
+  cursor: w-resize;
+}
+.xa-slider.xa-slider-enabled .xa-slider-handle:active {
+  background-color: #8ea1ca;
+}
+.xa-slider .xa-slider-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.xa-slider .xa-slider-handle {
+  position: absolute;
+  top: -5px;
+  bottom: -5px;
+  left: 0;
+  width: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #ededed;
+  border: 1px solid #dfdfdf;
+}

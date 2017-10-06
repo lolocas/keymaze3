@@ -1,0 +1,46 @@
+﻿<xa-window-default-header resource-key="Performance"
+                          icon="XaCommon/Img/Formule.png"
+                          hidevalidate="false" hideclose="false">
+</xa-window-default-header>
+
+<div class="modal-body window-content clearfix">
+    <div class="container form-group">        
+        <div class="row">
+            <div class="col-xs-3">
+                <xa-slick-grid grid-options="vm.formModel.gridSport" height-offset="0"></xa-slick-grid>
+            </div>
+            <div class="col-xs-3">
+                <xa-slick-grid grid-options="vm.formModel.gridLieu" height-offset="0"></xa-slick-grid>
+            </div>
+            <div class="col-xs-3">
+                <xa-slick-grid grid-options="vm.formModel.gridSousLieu" height-offset="0"></xa-slick-grid>
+                <xa-slick-grid grid-options="vm.formModel.gridType" height-offset="0"></xa-slick-grid>
+            </div>
+            <div class="col-xs-3">
+                <div class="row">
+                    <xa-text-area style="height: 200px;"></xa-text-area>
+                </div>
+                <div class="row">
+                    <xa-label class="edl-keepinline" resource-key="TXT_DISTANCE"></xa-label>
+                    <xa-text-box class="edl-keepinline" style="width: 100px;"
+                                 input-value="vm.formModel.performance.k_distance"
+                                 did-change="vm.distanceChange"></xa-text-box>
+                </div>
+                <div class="row">
+                    <xa-label class="edl-keepinline" resource-key="TXT_TEMPS"></xa-label>
+                    <xa-text-box class="edl-keepinline" style="width: 70px;"
+                                 input-value="vm.formModel.performance.k_temps"
+                                 did-change="vm.tempsChange"></xa-text-box>
+                    <xa-text-box class="edl-keepinline" style="width: 70px;"
+                                 input-value="vm.formModel.formatTemps"
+                                 did-change="vm.formatTempsChange"></xa-text-box>
+                </div>
+                <div class="row">
+                    <xa-label class="edl-keepinline" resource-key="TXT_VITESSEMOY"></xa-label>
+                    <xa-text-box class="edl-keepinline" style="width: 100px;"
+                                 input-value="vm.formModel.performance.k_vitmoy"></xa-text-box>
+                </div>
+            </div>
+        </div>        
+    </div>
+</div>

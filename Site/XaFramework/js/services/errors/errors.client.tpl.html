@@ -1,0 +1,11 @@
+﻿<xa-window-default-header icon="XaFramework/img/popup/MsgIconError.png" hidevalidate="true" hideclose="false" resource-key="Javascript Exception"></xa-window-default-header>
+<div class="modal-body window-content clearfix">
+        
+    <div class="error-body">
+        <div><span class="field">message:</span><span>{{error.instance.exception.message}}</span></div>
+        <div><span class="field">cause:</span><span>{{error.instance.cause}}</span></div>
+        <div><span class="field">stack:</span><pre>{{error.instance.exception.stack}}</pre></div>
+    </div>
+
+</div>
+<xa-window-footer></xa-window-footer>

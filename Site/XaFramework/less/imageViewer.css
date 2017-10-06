@@ -1,0 +1,107 @@
+.imageViewer {
+  min-width: 300px;
+  min-height: 300px;
+  /*position:relative; don't change position because it will override position:absolute and won't fit the screen */
+}
+.imageViewer .imageList {
+  float: left;
+  width: 10%;
+  border-right: solid 1px #000;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+.imageViewer .imageDetails {
+  float: left;
+  position: relative;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 10%;
+}
+.imageViewer .imageDetails.fullWidth {
+  left: 0;
+}
+.imageViewer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.imageViewer ul.sideList li {
+  margin-bottom: 10px;
+  width: 100%;
+}
+.imageViewer ul.sideList li a {
+  display: block;
+  padding: 15px;
+}
+.imageViewer ul.sideList li a.active {
+  background-color: #ddd;
+}
+.imageViewer ul.sideList li img {
+  width: 100%;
+}
+.imageViewer ul.sideList li.lable {
+  display: block;
+}
+.imageViewer .toolbarContainer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+}
+.imageViewer ul.toolbar {
+  display: inline-block;
+  padding: 5px 20px;
+  background-color: #808080;
+  color: #fff;
+  border-radius: 15px;
+  width: auto;
+  text-align: center;
+  margin: 0 auto;
+}
+.imageViewer ul.toolbar a {
+  color: white;
+}
+.imageViewer ul.toolbar li {
+  float: left;
+  width: auto;
+  margin-right: 15px;
+}
+.imageViewer ul.toolbar li a {
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+.imageViewer ul.toolbar li a.print {
+  background: url(../img/imageViewer/Printer32.png) no-repeat center center;
+}
+.imageViewer ul.toolbar li a.fullScreen {
+  background: url(../img/imageViewer/FullScreen.png) no-repeat center center;
+}
+.imageViewer ul.toolbar li a.zoomReset {
+  background: url(../img/imageViewer/ZoomReset.png) no-repeat center center;
+}
+.imageViewer ul.toolbar li a.zoomIn {
+  background: url(../img/imageViewer/ZoomIn.png) no-repeat center center;
+}
+.imageViewer ul.toolbar li a.zoomOut {
+  background: url(../img/imageViewer/ZoomOut.png) no-repeat center center;
+}
+.imageViewer ul.toolbar li a.rotateLeft {
+  background: url(../img/imageViewer/RotateLeft.png) no-repeat center center;
+}
+.imageViewer ul.toolbar li a.rotateRight {
+  background: url(../img/imageViewer/RotateRight.png) no-repeat center center;
+}
+.imageViewer .mainImgContainer {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  overflow: auto;
+}

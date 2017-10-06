@@ -1,0 +1,9 @@
+﻿<div class="wContainer" ng-class="{'selected': widgetInfo.selected}">
+    <div class="widget"></div>
+
+    <ul class="widgetMenu">
+        <li ng-repeat="mitem in ::menu.menuOptionList">
+            <a href="javascript:" ng-click="menu.click(mitem)" test-id="{{::mitem.val}}" ng-bind-html="::mitem.text"></a>
+        </li>
+    </ul>
+</div>

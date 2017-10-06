@@ -1,0 +1,13 @@
+﻿<xa-window-default-header resource-key="Erreur / Error" hidevalidate="true" hidecancel="true"></xa-window-default-header>
+<div class="modal-body window-content clearfix dialog-body">
+    <div align="center">
+        Impossible de contacter le serveur / Unable to contact the server <br /><br />
+        Si le problème persiste veuillez contacter votre administrateur <br />  If the problem continue please contact your administrator.';
+        <br /><br />
+        Url : {{ error.instance.config.url}}
+        <br />
+        <br />
+        <div align="center"><input onclick="javascript:location.reload()" type="button" value="Redemarrer l'application" /></div>
+    </div>
+</div>
+<xa-window-footer></xa-window-footer>

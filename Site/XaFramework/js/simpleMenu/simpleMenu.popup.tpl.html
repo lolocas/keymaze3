@@ -1,0 +1,8 @@
+﻿<ul class="ng-hide listMenu ngShowAnimation menuDropdown" ng-show="showListSelection">
+    <li ng-repeat="opt in ::options track by $index" ng-title="opt.val" ng-mouseenter="activateIndex($index)" ng-class="{'header': opt.isHeader }">
+        <a ng-click="changeFn(opt)" href="javascript:void(0);" ng-class="{ active: isActive($index) }" test-id="{{:: opt.testId}}">
+            <img ng-src="{{::opt.icon}}" ng-if="opt.icon" />
+            <span ng-bind-html="opt.text"></span>
+        </a>
+    </li>
+</ul>

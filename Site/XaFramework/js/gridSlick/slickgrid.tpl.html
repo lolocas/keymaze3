@@ -1,0 +1,39 @@
+﻿<div class="gridContainer xa-slick-grid" ng-class="{ 'no-header': gridOptions.noGroupingHeader }" data-gridname="{{gridOptions.gridName}}">
+    <xa-upload-button ng-if="gridOptions.uploadOptions" upload-options="gridOptions.uploadOptions"></xa-upload-button>
+  
+ 	<div class="xa-slick-grid-header" ng-hide="gridOptions.noGroupingHeader">
+		<div class="xa-slick-grid-group-elements">
+           	<span class="group-indicator" ng-if="!groups.length">{{::'TXT_GRID_GROUP_INDICATOR' | tr}}</span>
+			<ul ng-if="groups.length" class="groupList">
+				<li ng-repeat="group in groups">
+					<span class="grip-group-label">
+						<span ng-click="sortGroup($index)">
+							<span ng-bind="group.name"></span>
+							<span class="slick-sort-indicator" ng-class="group.sortClassName"></span>
+						</span>
+                        <span class="remove" ng-click="removeGroup($index)">x</span>
+					</span>
+					<span ng-if="!$last" class="group-arrow"></span>
+				</li>
+			</ul>
+		</div>
+
+		<ul class="xa-slick-grid-header-buttons gridButtons">
+            <li ng-if="::quickSearchFn">
+                <xa-label resource-key="TXT_RECHERCHE"></xa-label>:
+            </li>
+            <li ng-if="::quickSearchFn">
+                <xa-text-box input-value="$parent.searchValue" on-enter="quickSearchFn" class="slickSearchInput"></xa-text-box>
+            </li>
+			<li id="gridRowCount"></li>
+			<li ng-repeat="btn in ::gridOptions.gridButtons" ng-show="isHeaderButtonVisible(btn)">
+                <xa-image-button click="btn.click(gridOptions);" imgurl="{{:: btn.imgUrl}}" resource-key="{{::btn.resourceKey}}" class="{{::btn.cssClass}}"></xa-image-button>
+			</li>
+            <li ng-if="::deleteFn" style="width:30px">
+                <xa-image-button dynimgurl="imgTrashUrl" resource-key="TXT_SUPPRIMER" class="delete{{::gridOptions.gridName}}"></xa-image-button>
+            </li>
+		</ul>
+	</div>
+
+	<div class="xa-slick-grid-host" style=""></div>
+</div>

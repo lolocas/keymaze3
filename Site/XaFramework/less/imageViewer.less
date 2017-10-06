@@ -1,0 +1,111 @@
+﻿.imageViewer {
+    min-width:300px;
+    min-height:300px;
+    /*position:relative; don't change position because it will override position:absolute and won't fit the screen */
+
+    .imageList {
+        float:left;width:10%;
+        border-right:solid 1px #000;
+
+        position:absolute;top:0;bottom:0;
+        left:0;
+    }
+
+    .imageDetails {
+        float:left;
+        
+        position:relative;
+        &.fullWidth {
+            left:0;
+
+        }
+        position:absolute;top:0;bottom:0;right:0;
+        left:10%;
+    }
+
+    ul {
+        list-style-type:none;
+        margin:0;
+        padding:0;
+    }
+
+    ul.sideList li {
+        margin-bottom:10px;
+        width:100%;
+        
+        a {
+            display: block;
+            padding: 15px;
+
+            &.active {
+                background-color: #ddd;
+            }
+        }
+
+        img{
+            width:100%;
+        }
+    }
+
+    ul.sideList li.lable {
+        display:block;
+    }
+
+    .toolbarContainer {
+        position:absolute;
+        bottom:0;
+        width:100%;
+        left:0;
+    }
+    ul.toolbar {
+        display:inline-block;
+        padding:5px 20px;
+        background-color:#808080;
+        color:#fff;
+        border-radius:15px;
+        width:auto;
+        text-align:center;
+        margin:0 auto;
+        
+         a {
+             color:white;
+         }
+    }
+    ul.toolbar li {
+        float:left;width:auto;margin-right:15px;
+
+        a {
+            display:block;width:32px;height:32px;
+        
+            &.print {
+                background:url(../img/imageViewer/Printer32.png) no-repeat center center;
+            }
+            &.fullScreen {
+                background:url(../img/imageViewer/FullScreen.png) no-repeat center center;
+            }
+            &.zoomReset {
+                background:url(../img/imageViewer/ZoomReset.png) no-repeat center center;
+            }
+            &.zoomIn {
+                background:url(../img/imageViewer/ZoomIn.png) no-repeat center center;
+            }
+            &.zoomOut {
+                background:url(../img/imageViewer/ZoomOut.png) no-repeat center center;
+            }
+            &.rotateLeft {
+                background:url(../img/imageViewer/RotateLeft.png) no-repeat center center;
+            }
+            &.rotateRight {
+                background:url(../img/imageViewer/RotateRight.png) no-repeat center center;
+            }
+        }
+    }
+    
+
+    .mainImgContainer {
+        display:block;
+        position:absolute;
+        top:0;bottom:50px;left:0;right:0;
+        overflow:auto;
+    }
+}

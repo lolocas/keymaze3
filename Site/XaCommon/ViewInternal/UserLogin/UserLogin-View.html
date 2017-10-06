@@ -1,0 +1,59 @@
+<section id="login" class="container" style="margin-top:150px" ng-show="!vm.showLogin">
+    <div style="margin:auto;text-align:center;width:700px" >
+            <div align="center"><img style="width:300px" ng-src="Img/logo-big.png" alt="{{::HELPER.ConfConst.PRODUCT_TITLE}}"></div>
+            <div class="clear"></div>
+            <h1 ng-show="!vm.isReadyToClose">{{ ::HELPER.ConfConst.PRODUCT_TITLE}}</h1>
+    </div>
+</section>
+
+<section class="container mainscreen mainscreenLogin" ng-show="vm.showLogin">
+    <div class="row">
+        <div class="col-sm-6 imgContainer">
+            <img ng-src="Img/logo-big.png" alt="{{::HELPER.ConfConst.PRODUCT_TITLE}}" />
+        </div>
+        <div class="col-sm-6 loginContainer">
+            <div class="login-form center-block">
+                <div class="row" ng-show="vm.disconnected == 'true'">
+                    <div class="col-xs-12">
+                        <div class="msg-err"><xa-label resource-key="TXT_DECONNEXION"></xa-label></div>
+                    </div>
+                </div>
+
+                <div class="row" style="padding-top:14px;">
+                    <div class="col-xs-12"><xa-label resource-key="TXT_CODE_ACCES"></xa-label></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12"> <xa-text-box input-value="vm.formModel.username" test-id="txtUSERNAME" xa-autofocus></xa-text-box></div>
+                </div>
+
+                <div class="row" style="padding-top:14px;">
+                    <div class="col-xs-12"> <xa-label resource-key="TXT_MOT_PASSE"></xa-label></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12">  <xa-password input-value="vm.formModel.password" test-id="txpPASSWORD" on-enter="vm.identification"></xa-password></div>
+                </div>
+                <div class="row" style="padding-top:14px;">
+                    <div class="col-xs-12"><xa-button click="vm.identification()" test-id="btnVALIDER" resource-key="TXT_LOGIN"></xa-button></div>
+                </div>
+
+                <!-- HIDDEN FIELD TO NEVER APPLY PASSWORD SAVE -->
+                <input style="display:none" type="text" name="fakeusernameremembered" />
+                <input style="display:none" type="password" name="fakepasswordremembered" />
+                <!-- HIDDEN FIELD TO NEVER APPLY PASSWORD SAVE -->
+
+            </div>
+            <div class="login-biometrie">
+                <xa-image-button id="btnBiometrie" resource-key="TXT_IDENTIFICATION_BIOMETRIQUE" click="vm.identificationFromBiometrie()" imgurl="XaCommon/Img/Biometrie.png" ng-if="vm.formModel.biometrieAvailable"></xa-image-button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>{{HELPER.ConfConst.PRODUCT_TITLE}}</h1>
+        </div>
+    </div>
+</section>
+
+

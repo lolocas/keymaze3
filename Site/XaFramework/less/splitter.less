@@ -1,0 +1,134 @@
+﻿.split-panes 
+{
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  position: absolute; 
+  overflow: hidden;
+}
+
+.split-panes > .split-handler 
+{
+  //background: transparent;
+  position: absolute;
+ // z-index: 1000;
+
+  &.active { //applied while dragging
+      z-index:999999 !important;
+  }
+}
+
+
+
+/* Horizontal */ 
+
+.split-panes.horizontal {
+     > .split-handler {
+      width: 12px;
+      top: 0; 
+      bottom: 0px;
+      cursor: ew-resize;
+      left:50%;
+      // z-index: 10000;
+
+      .col-centered {
+          width:12px;
+          top:48%;
+          position: absolute;
+      
+          a, .info {
+              padding:0;
+              margin:0;
+              width:100%;
+          }
+      }
+    }
+
+    > .split-pane1,
+    > .split-pane2
+    {
+      position: absolute;
+      height: 100%;
+    }
+
+    > .split-pane1
+    { 
+      width: 50%; 
+      //z-index:8888;
+    }
+
+    > .split-pane2
+    {
+      left: 50%;
+      right: 0px;
+      //border-left: 1px solid #aaa;
+      //z-index:9999;
+    }
+}
+
+/* Vertical */
+
+.split-panes.vertical {
+    > .split-handler
+    {
+      height: 12px;
+      top: 50%; 
+      left: 0px;
+      right: 0px;
+      cursor: ns-resize;
+   //   z-index: 999;
+    }
+
+    > .split-pane1,
+    > .split-pane2
+    {
+      position: absolute;
+      width: 100%;
+    }
+
+    > .split-pane1
+    {
+      height: 50%; 
+      //z-index:888;
+    }
+
+    > .split-pane2
+    {
+      top: 50%;
+      bottom: 0px;
+      //border-top: 1px solid #aaa;
+      // z-index:999;
+    }
+}
+
+.split-handler {
+    background-color:#aaa;
+    &:hover {
+        background-color:#666;
+    }
+
+    div {
+        width:110px;
+        line-height:12px;
+        min-height: 12px;
+    }
+    a, div.info {
+        padding-left:5px;
+        padding-right:5px;
+        font-size:10px;
+        color:white;
+        display:block;
+        float:left;
+        width:25px;
+        text-align:center;
+    }
+
+    div.info {
+        width:40px;
+    }
+    a.splitter-btn:hover {
+        background-color:white;
+        color:red
+    }
+}

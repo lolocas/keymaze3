@@ -1,0 +1,8 @@
+﻿<ul class="colorPickerPopup xa-dropdown-menu dropdown-menu">
+    <li ng-repeat="col in colorList" ng-class="{'selected': $parent.color == col}"><a href="javascript:void(0);" ng-click="$parent.selectColor(col)" ng-style="{'background-color': col}"></a></li>
+    <li class="customColorContainer">
+        <input type="text" class="form-control customColor" ng-model="customColor" style="" />
+        <xa-button-advanced click="selectColor(customColor, $event)" class="customButton" text="SELECT_COLOR"></xa-button-advanced>
+    </li>
+
+</ul>

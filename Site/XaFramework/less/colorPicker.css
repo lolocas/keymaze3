@@ -1,0 +1,62 @@
+.slick-row .slick-cell .colorPicker.form-control {
+  padding: 0;
+}
+.colorPicker.form-control {
+  padding: 0;
+  padding-top: 2px;
+  position: relative;
+  padding-left: 2px;
+  padding-right: 23px;
+}
+.colorPicker.form-control a.selColor {
+  display: block;
+  height: 18px;
+  width: 100%;
+  float: left;
+}
+.colorPicker.form-control a.remove {
+  position: absolute;
+  z-index: 10;
+  right: 3px;
+}
+.colorPickerPopup {
+  position: absolute;
+  z-index: 10000;
+  padding: 10px;
+  margin: 0;
+  min-width: 300px;
+}
+.colorPickerPopup li {
+  display: block;
+  float: left;
+  padding: 5px;
+}
+.colorPickerPopup li.selected {
+  padding: 3px;
+  border: solid 2px #000;
+}
+.colorPickerPopup li a {
+  display: block;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+}
+.colorPickerPopup li.customColorContainer {
+  clear: both;
+  display: block;
+  width: 100%;
+  float: left;
+  position: relative;
+}
+.colorPickerPopup li.customColorContainer .customColor {
+  display: inline-block;
+  width: 70%;
+}
+.colorPickerPopup li.customColorContainer .customButton {
+  display: inline-block;
+  float: right;
+  width: 29%;
+}
+.colorPickerPopup li.customColorContainer .customButton .back {
+  line-height: 23px;
+}

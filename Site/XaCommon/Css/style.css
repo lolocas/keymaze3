@@ -1,0 +1,871 @@
+﻿html body {
+    font-family: Arial;
+    height: 100%;
+}
+
+a {
+    cursor: pointer;
+}
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    a.disabled, .gray {
+        color: #b9b9b9;
+    }
+
+select[disabled], input[disabled] {
+    color: #b9b9b9;
+    background: #b1c7e1;
+    border-radius: 0;
+}
+
+select.form-control {
+    padding: 0 0 0 6px;
+}
+
+[disabled].form-control, [readonly].form-control, fieldset[disabled] .form-control {
+    background: #b1c7e1;
+}
+
+/* desactivation en lkecture seule du __/__/__ */
+input[type='text']:disabled:-ms-input-placeholder {
+    color: transparent;
+}
+
+html label {
+    font-weight: normal;
+}
+
+.form-horizontal .control-label {
+    text-align: left;
+}
+
+.border-top {
+    border-top: 1px solid #E5E5E5;
+}
+
+
+span.input-group-btn > .btn-default {
+    padding: 2px 12px;
+}
+
+/*******************************/
+
+/*  Surcharge bootstrap VTO    */
+
+/*******************************/
+
+/* Alignement vertical des libellés */
+
+.form-control {
+    border-radius: 0;
+    display: inline-block; /* Correction du probleme avec les dates sur les champs input.*/
+}
+
+.form-group label {
+    padding: 0;
+    margin: 0;
+}
+
+/* Style personnalisé pour la grille */
+.grid-cell-image {
+    text-align: center;
+}
+
+/*.grid-cell-image img {
+    height: 22px;
+}*/
+
+
+.grid-cell-montant {
+    text-align: right;
+}
+
+.grid-cell-nombre {
+    text-align: right;
+}
+
+.grid-cell-hidden {
+    display: none !important;
+}
+
+.slick-header-column.zero-width {
+    padding: 0;
+    border: 0;
+}
+
+.slick-cell.cellFactorWarningTemp {
+    color: red;
+}
+.slick-cell.cellFactorSupTemp {
+    color: orange;
+}
+.slick-cell.cellFactorInfTemp {
+    color: blue;
+}
+
+
+/* Style du tableau de bord */
+header {
+    background: transparent url(../Img/header_bar.png) repeat-x;
+    height: 70px;
+    padding-top: 10px;
+}
+
+    header .icon {
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: center;
+        float: left;
+        padding-top: 5px;
+        padding-left: 2px;
+        padding-right: 2px;
+        color: white;
+        overflow: hidden;
+    }
+
+        header .icon.glyphicon {
+            color: black;
+            font-size: 20px;
+        }
+
+   
+    header div.listType {
+        background: transparent url('../Img/selections.png') no-repeat 6px 6px;
+    }
+
+        header div.listType .head {
+            background-color: transparent;
+        }
+
+    header div.right {
+        float: right;
+        width: auto;
+        padding-right: 10px;
+    }
+
+        header div.right .xa-period {
+            margin: 4px 2px 2px 2px;
+        }
+
+    header div.listType ul li a {
+        display: block;
+    }
+
+        header div.listType ul li a:hover {
+            background-color: #006DC0;
+            color: #D4ECFF;
+            text-decoration: none;
+        }
+
+
+
+
+.panel-group .panel {
+    overflow: visible;
+}
+
+.form-group .icon > a,
+header .icon > a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border: solid 3px transparent;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-clip: center;
+}
+
+header .label {
+    font-size: 100%;
+}
+
+header .icon a.selected {
+    border: solid 3px #FF7F35;
+}
+
+footer {
+    background: transparent url(../Img/footer_bar.png) repeat-x;
+    height: 40px;
+    padding: 4px 10px 2px 5px;
+    line-height: 30px;
+    color: white;
+    position: fixed;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 101;
+}
+
+    .multiButton, footer .xang {
+        margin-right: 3px;
+        margin-left: 3px;
+    }
+
+.window .table > thead > tr > th,
+.window .table > tbody > tr > th,
+.window .table > tfoot > tr > th,
+.window .table > thead > tr > td,
+.window .table > tbody > tr > td,
+.window .table > tfoot > tr > td {
+    border-top: 1px solid #777;
+}
+
+
+.ngHeaderContainer {
+    box-shadow: 0 5px 6px rgba(50, 50, 50, 0.1);
+    border-bottom: 1px solid #ccc;
+}
+
+.rotate {
+    -moz-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    -webkit-transform: translate(0,0);
+    transform: translate(0,0);
+    -moz-transition: transform 0.2s ease-in;
+    -o-transition: transform 0.2s ease-in;
+    -webkit-transition: transform 0.2s ease-in;
+    /*-ms-transition: transform 0.2s ease-in; IE10+ gets the standard transition*/
+    transition: transform 0.2s ease-in;
+    outline: 0;
+    overflow: hidden;
+    /*raul: backface-visibility hidden in IE is causing flickering... http://stackoverflow.com/questions/28917557/using-3d-transform-flip-is-not-working-in-ie11-mine-is-different*/
+    -moz-backface-visibility: visible;
+    -webkit-backface-visibility: visible;
+    -ms-backface-visibility: visible;
+    backface-visibility: visible;
+    vertical-align: middle;
+}
+
+    /*.rotate:hover,
+    .rotate:active,*/
+    a:focus {
+        outline: 2px dotted;
+    }
+
+    .rotate:hover {
+        -moz-transform: rotateZ(12deg);
+        -ms-transform: rotateZ(12deg);
+        -o-transform: rotateZ(12deg);
+        -webkit-transform: rotateZ(12deg);
+        transform: rotateZ(12deg);
+    }
+
+.date-picker {
+    width: 130px;
+}
+
+.timePickerContainer {
+    width: 50px;
+    display: inline-block;
+}
+
+/* style for the error tooltip! */
+.has-error .form-control, .has-error.form-control {
+    border-color: #dc000c;
+}
+
+    .has-error .form-control:focus, .has-error.form-control:focus {
+        border-color: #dc000c;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #dc000c;
+    }
+
+/* desactivation des croix sur les champs input */
+input::-ms-clear {
+    display: none;
+}
+
+/* Réduire taille de tous les controles  */
+.form-control {
+    height: 22px;
+}
+
+/* TODO: a gerer dans framework pour window et le resteGestion lecture seule, suppression espace à droite*/
+textarea {
+    resize: none;
+}
+
+    input[type="text"]:disabled,
+    textarea:disabled {
+        padding-left: 0;
+        padding-top: 4px;
+    }
+
+/* Mise en gras des controles de gras*/
+.form-control[disabled] {
+    font-weight: bold;
+}
+
+/* retour a la ligne automatique dans les dialogs. */
+.text-info {
+    word-wrap: break-word;
+}
+
+/* Accordeon padding de 5 */
+.panel-body {
+    padding: 2px;
+    background-color: #dee9f3;
+}
+
+/* Accordeon padding de 5 */
+.modal-body .container .edl-control {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+
+/* Todo voir avec raul pour peut pas mettre .form-Control  Positionnement de la fleche sur les combos */
+.right-inner-addon i {
+    padding: 4px 7px;
+}
+
+.form-group .tooltip {
+    padding: 0;
+    margin-top: 2px;
+}
+
+    .form-group .tooltip .tooltip-inner {
+        background-color: #dc000c;
+        color: white;
+        font-size: 16px;
+    }
+
+    .form-group .tooltip .tooltip-arrow {
+        display: none;
+    }
+
+.gridStylePopup {
+    position: absolute;
+    bottom: 10px;
+    top: 50px;
+    left: 15px;
+    right: 15px;
+}
+
+/*TODO trouver patch plus propre, bouton du tdb*/
+
+.multiButton .btn.xabutton {
+    height: 33px;
+}
+
+.red {
+    color: #dc000c;
+}
+
+.degrade-blue-bar {
+    color: #4971BE;
+    height: 5px;
+    border: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-image: linear-gradient(to right,#6aa3e4,rgba(0,255,0,0));
+}
+
+.blue-cyan {
+    color: #1E90FF;
+}
+
+.msg-err {
+    color: #dc000c;
+    margin-bottom: 5px;
+}
+
+header div.label {
+    display: block;
+    float: left;
+    text-align: right;
+    margin-top: 3px;
+    line-height: 20px;
+}
+
+
+/* global classes EDL*/
+.col-fit {
+    float: left;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.xaLabelData {
+    font-weight: bold;
+    display: inline-block;
+    padding-top: 1px;
+    white-space: pre-line;
+}
+
+.xaLabel {
+    display: inline-block;
+    padding-top: 1px;
+}
+
+.modal-header img {
+    max-height: 40px;
+}
+
+.header-button-container a {
+    float: left;
+}
+
+.circleForPastille {
+    border-radius: 50%;
+    font-size: 13px;
+    font-weight: bold;
+    height: 16px;
+    line-height: 17px;
+    text-align: center;
+    width: 16px;
+    display: inline-block;
+}
+
+
+/* Containers : petite marge en haut et en bas, pas de marge sur les côtés */
+.modal-body .container {
+    padding: 0; /*5px 0px;*/
+}
+
+/* Taille et position des boutons des searchboxes (à corriger directement dans Searchbox.css ?) */
+
+
+/* Tab content transparent */
+.tab-content {
+    background-color: #cedeef;
+    padding: 0px 5px;
+}
+
+
+/* Couleur des rubriques des accordéons (à corriger directement dans Accordion.css ?) */
+.panel-heading a.accordion-toggle {
+    background-color: #b3d2ed;
+}
+
+/* Pour les titres au sein des fenêtres */
+.edl-title {
+    font-weight: bold;
+    border-bottom: 1px solid black;
+    padding-top: 10px !important;
+}
+
+/* Déclaration du container  */
+.edl-exam-cr-container iframe.inheritFit {
+    width: 100%;
+    height: 500px;
+}
+
+/* Pour affichage des textes numériques */
+.edl-numeric {
+    font-weight: bold;
+    text-align: right;
+}
+
+/* Pour aligner les images sur une ligne (Par exemple la loupe des filtres) */
+.edl-center-img {
+    margin-top: -10px;
+}
+
+/* Classe pour mettre des controles les uns à coté des autres.*/
+.edl-keepinline {
+    float: left;
+}
+
+.edl-fill {
+    width: 100%;
+}
+
+/* nouveau radio button style */
+.XaRadioList a.radioButton {
+    color: black;
+}
+
+ul.XaRadioList.radioList li {
+    padding: 0;
+    margin: 0;
+}
+
+/* Classe pour mettre des controles les uns à coté des autres.*/
+.edl-right {
+    text-align: right;
+    float: right !important;
+}
+
+.textEllipsis.xaLabel.edl-right {
+    text-align: right;
+    float:none !important;
+}
+
+.viewerTextLOG {
+    font-family: 'Courier New';
+    font-size: 12px;
+}
+
+ul.vignetteAction {
+    float: left;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+    ul.vignetteAction li {
+        list-style-type: none;
+        float: left;
+        margin-right: 10px;
+        width: auto;
+    }
+
+        ul.vignetteAction li a {
+            display: block;
+        }
+
+
+
+
+header {
+    min-width: 520px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 15;
+}
+
+
+.noScroll {
+    overflow: hidden !important;
+}
+
+/* Quick Filter Container*/
+.quikFilterContainer {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    height: 30px;
+}
+
+/* Bootstap sur tdb */
+.container.mainscreen {
+    width: 100%;
+}
+
+.iconViewerWord img {
+    height: 28px;
+}
+
+.slick-cell.gold {
+    background-color: gold;
+}
+
+
+.slick-cell.paleTurquoise {
+    background-color: paleTurquoise;
+}
+
+.slick-cell.selected .slick-cell.gold,.slick-cell.paleTurquoise   {
+    color:black
+}
+
+a.facturationItemVisualizer:hover {
+    background-color: lightblue;
+}
+
+/* Couleur de fond de l'onglet sélectionné */
+.classic.tabContainer .tab-content {
+    background-color: #e9f0f7;
+}
+
+.classic.tabContainer ul.nav li.active {
+    background-color: #e9f0f7;
+}
+
+.classic.tabContainer .selected.xa-form-button.xang .back {
+    background: #e9f0f7;
+}
+
+/* Gestion taille image des menus d'applications. */
+.listMenu.menuDropdown img {
+    width: 27px;
+}
+
+/* Classe pour desactiver le rotate dans le menu */
+.disablerotateonheader img, .disablerotateonheader a {
+    transform: none !important;
+}
+
+.xa-slick-grid-header-buttons.gridButtons a {
+    display: inline-table;
+}
+
+/* raul: make tooltip display on bottom!*/
+.bottomSearchboxTooltip .xa-searchbox.focus .xa-searchbox-pattern {
+    top: 23px;
+}
+
+.textLink {
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    color: #1E61FF;
+}
+
+.textEllipsis {
+    text-overflow: ellipsis;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+
+.loadingSection {
+    position: fixed;
+    top: 10%;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+    .loadingSection .imageContainer {
+        display: table;
+        margin: 0 auto;
+        font-size: 26px;
+    }
+
+        .loadingSection .imageContainer img.center-block {
+            max-width: 500px;
+            width: 100%;
+        }
+
+
+
+/* Histo patient */
+.rdv-presc-preaccueil {
+    color: red;
+}
+
+.rdv-presc-simple {
+    color: darkorange;
+}
+
+.histoFilter {
+    height: 40px;
+    width: 40px;
+    border: solid 1px darkgray;
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 4px;
+}
+
+
+.histoFilter.histoFilterActive {
+    background-color: lightGreen;
+}
+
+.slick-row.etatDesactive .slick-cell {
+    background-color: rgb(192, 192, 192);
+}
+
+/* Correctif d'affichage des grilles dans firefox, si desactivation du fitscreen dans la personnalisation*/
+  .slickgrid,
+    .slick-header-column {
+
+            box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            -webkit-box-sizing: content-box;
+            -ms-box-sizing: content-box;
+
+    }
+
+.imgViewerCr  {
+    font-size:21px;
+    cursor: pointer;
+}
+  
+  .xa-period.periodInput {
+    border-radius:0;
+    color:#555;
+    background: #b1c7e1;
+    border: solid 1px #66afe9;
+}
+
+
+
+/* Changement de style des accordeons */
+.panel-group .panel + .panel {
+    margin: 0 !important;
+}
+.panel-default > .panel-heading + .panel-collapse > .panel-body {
+    padding-bottom: 0;
+}
+
+.panel-title {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* input.xaDatePicker { // TODO: marche tres bien si pas de contenu à coté ...
+    display: inline-block;
+}*/
+
+
+/* Toggle interrupteur pour bouton AUTO */
+
+
+.toggleAutoContainer {
+    border-radius: 4px;
+    border: 1px solid gray;
+    width: 40px;
+    text-align: center;
+}
+
+.toggleAutoContainer.Vertical {
+     width: 46px;
+}
+
+.toggleAuto {
+    border-radius: 2px; border: 1px solid gray; width: 100%;font-size: 12px; font-weight: bolder;color: white;
+    cursor:pointer;
+}
+.toggleAuto.Vertical
+{
+    word-break: break-all;
+    width: 10px;
+    line-height: 8px;
+    font-size: 11px;
+}
+
+.toggleAuto.toggletrue {
+    background-color: cornflowerblue;
+}
+
+.toggleAuto.togglefalse {
+    background-color: lightgray;  
+}
+
+
+.advancedOptionsContainer {
+    padding-top: 3px;
+    padding-right: 2px
+}
+
+.advancedOptionsItem {
+    border-radius: 2px;
+    border: 1px solid gray;
+    font-size: 12px;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+    width: 50px;
+    line-height: 10px;
+    text-align: center;
+    display: block;
+    margin-top: 2px;
+}
+
+.advancedOptionsItem.optiontrue {
+    background-color: #4cae4c;
+}
+
+.advancedOptionsItem.optionfalse {
+    background-color: lightgray;  
+}
+
+.disabledCheckbox {
+    opacity: 0.2;
+}
+
+.slick-header-column .headeraction {
+    cursor:pointer;
+}
+
+.edl-img-label  img {
+    vertical-align: top;
+}
+
+/*.form-control*/
+.baliseChooser  input[type='text']:disabled {
+    background: white;
+    cursor: pointer;
+    color: black;
+    box-shadow: none;
+    padding: 0 6px;
+}
+
+.panel-group {
+    margin-bottom: 0;
+}
+
+.slick-row.NonInstallee {   
+    background-color: #ffa07a;
+}
+.slick-row.InstallationManuelle {   
+    background-color: #ffe4e1;
+}
+.slick-row.NonDemarree {   
+    background-color: #ffffe0;
+}
+.slick-row.Demarree {   
+    background-color: #90ee90;
+}
+.slick-row.MiseAJour {   
+    background-color: #afeeee;
+}
+.slick-row.Addon {   
+    background-color: #ffffff;
+}
+.slick-row.Inactive {   
+    background-color: #d3d3d3;
+}
+
+/* Gestion des favoris dans les combos.*/
+.favoriteCombo.xa-combobox {
+   float: left;
+   width: 100%;
+}
+.favoriteCombo.xa-combobox .form-control {
+    padding-right: 40px !important;
+}
+.favoriteCombo.favoriteContainer
+{
+    position: absolute;
+    z-index: 2;
+    right: 20px;
+    top: 0;
+}
+
+/* Tdb filter */
+.tdbFilterClear {position:absolute; z-index:2; margin-left: 22px; margin-top: -7px}
+
+.tdbRefreshAuto label {
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 20px;
+    z-index: 2;
+    color: white;
+    font-weight: bold;
+}
+
+
+.tdbRefreshAuto img {
+    position: absolute;
+    z-index: 1;
+    height: 24px;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+/* Correctif tinymce affichage des boutons des fenetres d'assistant */
+.mce-btn .mce-txt {
+    color:black !important;
+}

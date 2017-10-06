@@ -1,0 +1,43 @@
+﻿<div class="buttonFilterContainer">
+    <div class="pull-left leftContainer">
+        <div class="buttonContainer pull-left">
+            <xa-button-advanced ng-repeat="opt in options"
+                                xa-draggable
+                                class="{{opt.typeFilter=='P' ? 'green': ''}}"
+                                drag-context="delete{{::idControl}}"
+                                drag-data="opt"
+                                text="opt.text"
+                                click="itemClick(opt)"
+                                selected="selectedItem == opt">
+            </xa-button-advanced>
+        </div>
+    </div>
+    <div class="pull-right rightContainer">
+        <div class="scrollMask">
+            <div class="fakeScroll">&nbsp;</div>
+        </div>
+        <div class="actionButtonContainer pull-left">
+            <a href="javascript:void(0)"
+               class="delete-icon rotate"
+               xa-drop-target
+               test-id="btnDeleteFilter"
+               drag-context="delete{{::idControl}}"
+               on-drop="itemDrop(data)"
+               ng-show="hasDelete"></a>
+
+            <a href="javascript:void(0)"
+               class="conf-icon rotate"
+               test-id="btnConfFilter"
+               ng-click="confClick()"
+               ng-show="hasConf"></a>
+
+            <a href="javascript:void(0)"
+             
+               class="visu-icon rotate"
+               test-id="btnVisuFilter"
+               ng-click="visuClick()"></a>
+
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>

@@ -1,0 +1,12 @@
+﻿<div id="LoadingPanel" class="xa-loading-indicator">
+    <div class="overlayContainer"></div>
+    <div class="loadingContent">
+        <p>
+            <span class="title">Please Wait...</span>
+            <span class="subtitlefixed">Loading In Progress...</span>
+            <span class="subtitle">{{loadingCustomMessage}}</span>
+            <span class="indicator" ng-if="::!loadingImage"></span>
+            <span class="subtitle"><input type="button" ng-if="loadingCancel" ng-click="cancelClick()" value="ANNULER" id="loadingCancelButton"></input></span>
+        </p>
+    </div>
+</div>

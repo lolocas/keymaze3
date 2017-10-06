@@ -1,0 +1,8 @@
+﻿<ul class="XaRadioList radioList">
+    <li ng-repeat="val in _innerSource track by $index" ng-style="{ 'width': itemWidth }">
+        <a class="radioButton" test-id="{{::val.testId}}" ng-class="{selected: $parent.selection == val.value, disabled: !$parent.canedit, 'xaValidationTooltip': $first}" tabindex="0" ng-click="internalChange(val)" ng-keypress="keyPress(val, $event)">
+            <span class="icon"></span>
+            <span class="text">{{::val.text}}</span>
+        </a>
+    </li>
+</ul>

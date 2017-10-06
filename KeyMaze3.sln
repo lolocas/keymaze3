@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "KeyMaze3", "http://localhost:51628", "{958D3E34-843C-422A-B886-ADAEAF76D8BD}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_51628"
+		Debug.AspNetCompiler.PhysicalPath = "..\KeyMaze3\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51628\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_51628"
+		Release.AspNetCompiler.PhysicalPath = "..\KeyMaze3\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51628\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\KeyMaze3\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeymazeLocal", "D:\Sources\KeyMaze3\KeymazeLocal\KeymazeLocal.csproj", "{DB770922-F576-4E7F-A9C3-D3797AC1C639}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{958D3E34-843C-422A-B886-ADAEAF76D8BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{958D3E34-843C-422A-B886-ADAEAF76D8BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{958D3E34-843C-422A-B886-ADAEAF76D8BD}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{958D3E34-843C-422A-B886-ADAEAF76D8BD}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{958D3E34-843C-422A-B886-ADAEAF76D8BD}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{958D3E34-843C-422A-B886-ADAEAF76D8BD}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{958D3E34-843C-422A-B886-ADAEAF76D8BD}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{958D3E34-843C-422A-B886-ADAEAF76D8BD}.Release|ARM.ActiveCfg = Debug|Any CPU
+		{958D3E34-843C-422A-B886-ADAEAF76D8BD}.Release|x64.ActiveCfg = Debug|Any CPU
+		{958D3E34-843C-422A-B886-ADAEAF76D8BD}.Release|x86.ActiveCfg = Debug|Any CPU
+		{DB770922-F576-4E7F-A9C3-D3797AC1C639}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB770922-F576-4E7F-A9C3-D3797AC1C639}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB770922-F576-4E7F-A9C3-D3797AC1C639}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{DB770922-F576-4E7F-A9C3-D3797AC1C639}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{DB770922-F576-4E7F-A9C3-D3797AC1C639}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DB770922-F576-4E7F-A9C3-D3797AC1C639}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB770922-F576-4E7F-A9C3-D3797AC1C639}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB770922-F576-4E7F-A9C3-D3797AC1C639}.Release|ARM.ActiveCfg = Release|Any CPU
+		{DB770922-F576-4E7F-A9C3-D3797AC1C639}.Release|x64.ActiveCfg = Release|Any CPU
+		{DB770922-F576-4E7F-A9C3-D3797AC1C639}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

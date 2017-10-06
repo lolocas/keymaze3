@@ -1,0 +1,26 @@
+﻿<div class="modal-header clearfix">
+    <div class="left status-container">
+        <img class="img-logo" ng-src="{{modalIcon}}" alt="" style="padding-left: 3px" />
+        <span class="winTitle">{{modalTitle}}</span>
+        <span ng-bind-html="formStatus | XaFilterValeurToFormStatus"></span>
+    </div>
+    <div class="right">
+        <div style="position: absolute; top: -1000px;left: -1000px;" class="ignoreFocus"><input type="text" class="startFocus" /></div>
+        <ul class="defaultButtons">
+            <li ng-show="validationErrors && validationErrors.length > 0" style="position: relative">
+                <a class="validationIcon rotate errIcon" href="javascript:void(0);">{{validationErrors.length}}</a>
+                <ul style="display:none" class="errorList">
+                    <li ng-repeat="err in validationErrors"><a href="javascript:void(0);" ng-click="focusElement(err.controlID)">{{::err.message}}</a></li>
+                </ul>
+            </li>
+            <li ng-repeat="button in ::extraActionsLeft">
+                <xa-image-button class="extraAction" click="button.applyFn()" imgurl="{{::button.img}}" ng-show="button.visibilityFn()" resource-key="{{::button.title}}" id="{{::button.id}}"></xa-image-button>
+            </li>
+             <li ng-if="hasOptions" class="advancedOptionsContainer ignoreFocus" ng-show="validateOptionVisibilityFn()">
+                <div class="advancedOptionsItem option{{ item.selected }}" ng-click="optionsChanged(item)" ng-repeat="item in ::validateOptionSource"  ng-show="item.visibilityFn()" test-id="opt{{ ::item.code }}" title="{{::item.libelle}}">{{::item.libelleShort}}</div>
+            </li>
+            <li ng-hide="hideClose"><a class="small-icon cancel rotate" test-id="btnANNULER" href="javascript:void(0);" ng-click="onClose()"></a></li>
+            <li ng-hide="hideValidate"><a class="big-icon save rotate" test-id="btnVALIDER" href="javascript:void(0);" ng-click="onValidate()"></a></li>
+        </ul>
+        </div>
+</div>

@@ -1,0 +1,94 @@
+﻿.xa-searchbox {
+
+    position: relative;
+    height: 22px;
+	
+    .xa-searchbox-pattern {
+        background-color: rgb(80, 182, 236);
+        border-radius: 4px 4px 4px 0;
+        padding: 0 5px;
+        font-size: 12px;
+        color: #000;
+        border: 1px solid #ccc;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        height: 20px;
+        line-height: 19px;
+        white-space: nowrap;
+        overflow: hidden;
+        //max-width: 100%; Affichage du tooltip en entier
+        -ms-text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+		display: none;
+
+        .ui-match {
+            font-weight: bold;
+        }
+    }
+
+    .form-control {
+        position: absolute;
+        z-index: 2;
+        padding: 6px 34px 6px 12px;
+        &::-ms-clear {
+            display: none;
+        }
+    }
+
+    .searchbox-buttons {
+        position: absolute;
+        z-index: 2;
+        right: 2px;
+        height: 25px;
+        padding: 0 2px;
+        ul {
+            padding-left: 0;
+        }
+         .search-button {
+            cursor: pointer;
+            top: 0; 
+               margin: 0;
+               margin-right: -2px;
+            &.loading {
+                -moz-animation: spin 1s infinite linear;
+                -o-animation: spin 1s infinite linear;
+                -webkit-animation: spin 1s infinite linear;
+                animation: spin 1s infinite linear; 
+            }
+        }
+
+        .custom-button {
+            cursor: pointer;
+            margin: 0;
+            top: 0; 
+            margin-top: 1px;
+            margin-right: 2px;
+        }
+    }
+
+    &.focus {
+        .xa-searchbox-pattern {
+            top: -19px;
+            z-index: 3;
+			display: block;
+        }
+    }
+}
+
+.xa-searchbox-messages {
+    background-color: #F5F5F5;
+	box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    width: 100%;
+    border-radius: 0 0 5px 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    z-index: 99999999;
+    color: black;
+
+	&.no-results {
+		position: absolute;
+		top: 100%;
+	}
+}

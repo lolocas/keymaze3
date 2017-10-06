@@ -1,0 +1,94 @@
+﻿@import "mixins.less";
+
+.tab-content
+{
+   border: 1px solid #ddd;
+   border-top:0;
+   padding:10px;
+   background-color:white;
+}
+
+.tabContainer.modern {
+	ul.nav-tabs {
+		> li {
+			margin: 5px;
+
+            a
+            {
+                cursor:pointer
+            }
+		}
+	}
+}
+
+.tabContainer ul.childTabs > li {
+    margin:0;
+
+    &>a{
+        padding: 5px 10px;
+    }
+}
+
+.uiTabContent {
+    border: solid 1px #ddd;
+}
+
+.tabContainer.classic {
+    .nav-tabs > li {
+        // Why am i force to do that ??????
+        // margin-bottom: -8px
+    }
+
+    ul.nav {
+        margin-bottom: 0px;
+        margin-top:8px;
+
+        li {
+            margin-right:1px;
+            padding: 0;
+            margin: 0;
+            height: 28px;
+        }
+        li.active {
+            background-color:white;
+            border-radius: 4px 4px 0 0;
+        }
+    }
+
+    .tab-content {
+        padding-top:10px;
+        border:solid 1px #fff;
+        background-color:white;
+    }
+
+
+    .xang.xa-form-button {
+        box-shadow: none;
+        border: none;
+        border-radius: 4px 4px 0 0;
+
+
+        &:hover {
+            background-color:white;
+        }
+        &.selected {
+            .back {
+                
+                //border: none;
+                background: white;
+                color: black;
+            }
+        }
+
+        .back {
+            padding: 0px 8px;
+            -moz-transition: all 0.2s ease;
+            -o-transition: all 0.2s ease;
+            -webkit-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+            background: #b1c7e1;
+            border: none;
+            color: black;
+        }
+    }
+}

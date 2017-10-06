@@ -1,0 +1,19 @@
+@media (max-width: 1050px) {
+  .defaultHamburger .collapseble-header {
+    display: none !important;
+  }
+  .defaultHamburger .collapseble-header.expanded {
+    display: block !important;
+  }
+  .defaultHamburger .toggle-menu {
+    display: block !important;
+  }
+  .defaultHamburger .fixed-header {
+    width: 100%;
+  }
+}
+@media (min-width: 1050px) {
+  .defaultHamburger .toggle-menu {
+    display: none !important;
+  }
+}

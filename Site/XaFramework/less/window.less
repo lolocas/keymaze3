@@ -1,0 +1,430 @@
+﻿@import "mixins.less";
+
+.tooltipWindow .window {
+    border: solid 3px #cccccc;
+}
+
+.xa-dialog-container {
+	position: absolute;
+	top: 0; // raul: was 5px; and causing offset positioning!
+	width: 100%;
+	z-index: 1100;
+
+	.xa-dialog {
+		margin: 0 auto;
+
+		.modal-content {
+			border: none;
+			// footer is going mad if content is not relative pos, when height is fixed!
+			position: relative;
+		}
+
+		.dialog-body {
+			font-size: 16px;
+			padding: 16px;
+			-ms-word-wrap: break-word;
+			word-wrap: break-word;
+		}
+
+	}
+}
+
+.dialogs.dialogs-notify .window {
+	background-color:#dae8f4;
+
+	.modal-header {
+		.gradient3Cols(#d5ebfb, #ebf1f6, #d6ebf4);
+	}
+
+	.modal-body {
+		background-color:#ebf1f6;
+	}
+
+	.modal-footer {
+		.gradient2Cols(#ebf1f6, #daecf9);
+	}
+}
+
+.dialogs.dialogs-confirm .window {
+	background-color:#ffffff;
+
+	.modal-header {
+		.gradient3Cols(#fdc79b, #ffe2cf, #f4d5bc);
+	}
+
+	.modal-body {
+		background-color:#ffe3d1;
+	}
+
+	.modal-footer {
+		.gradient2Cols(#ffdabf, #ffcca3);
+	}
+}
+
+.dialogs.dialogs-green .window {
+	background-color:#ffffff;
+
+	.modal-header {
+		.gradient3Cols(#c9f5a7, #C4FCCA, #C4FCCA);
+	}
+
+	.modal-body {
+		background-color:#C4FCCA;
+	}
+
+	.modal-footer {
+		.gradient2Cols(#C4FCCA, #c9f5a7);
+	}
+}
+
+
+.dialogs.dialogs-error .modal-content {
+     overflow: hidden;
+    border-radius:10px;
+    background-color: transparent;
+
+    .window {
+	    background-color:transparent;
+        height:100%;
+
+	    .modal-header {
+		    .gradient3Cols(#ff6969, #ffa5a5, #ff6969);
+            border-radius: 0;
+	    }
+
+	    .modal-body {
+		    background-color:#fff0f0;
+	    }
+
+	    .modal-footer {
+		    .gradient2Cols(#fff0f0, #ff6969);
+	    }
+    }
+}
+
+.fillHeight .modal-body {
+    position: absolute;
+    top: 47px;
+    bottom: 7px;
+    width: 100%;
+}
+
+.window {
+    &.window-shadow {
+        -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    }
+
+
+	&.fullscreen {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		overflow: hidden;
+
+		.modal-dialog {
+			width: 100%;
+			height: 100%;
+			padding: 0;
+		}
+		  
+		.modal-content, .modal-body {
+			height: 100%;
+			border-radius: 0;
+		}
+	}
+	 
+	background-color: #cedeef;
+	z-index: 1001;
+
+    //  VTO - ENLEVER CAR PROBLEME DE PERFORMANCE
+     -moz-border-radius: 10px;
+    border-radius: 10px;
+    
+    overflow: hidden; //show border radius!
+	
+	a.big-icon {
+		display: block;
+		width: 40px;
+		height: 40px;
+	}
+
+	a.small-icon {
+		display: block;
+		width: 30px;
+		height: 30px;
+		margin-top: 7px;
+	}
+
+    .extraAction img {
+        margin-right: 2px;
+        margin-top: 2px;
+    }
+
+	a.print {
+		background: transparent url('../img/popup/printer.png') no-repeat 1px 2px;
+	}
+
+	a.back {
+		background: transparent url('../img/popup/btn_next.png') no-repeat 1px 2px;
+	}
+
+	a.save {
+		background: transparent url('../img/popup/btn_ok.png') no-repeat 1px 2px;
+	}
+
+	a.cancel {
+		background: transparent url('../img/popup/btn_cancel.png') no-repeat center center;
+	}
+
+	.modal-header,
+	.modal-body,
+	.modal-footer {
+		width: 100%;
+		padding: 2px 12px;
+		background-color: #cedeef;
+	}
+	.modal-footer {
+		position: relative;
+		overflow: hidden;
+
+        //-moz-border-radius: 0 0 16px 16px;
+		//border-radius: 0 0 16px 16px;
+		border-top: none;
+		background: transparent url('../img/popup/footer_gradient.png') repeat-x;
+		height: 8px;
+		line-height: 8px;
+		padding: 0;
+		margin-top: 0;
+		padding-top: 10px;
+	}
+
+	.modal-header {
+		//-moz-border-radius: 10px 10px 0 0;
+		//border-radius: 10px 10px 0 0;
+		background: #cedeef url('../img/popup/header_gradient.png') repeat-x;
+
+		.left {
+			float: left;
+			height: 43px;
+
+			.img-logo {
+				width: auto;
+				float: left;
+				margin-right: 10px;
+			}
+
+			.winTitle {
+                color: #000000;
+				font-size: 18px;
+				margin-top: 6px;
+				margin-bottom: 2px;
+			}
+
+			img {
+				display: block;
+				margin-top: 4px;
+			}
+		}
+
+		.center {
+			float: left;
+		}
+
+		.right {
+			float: right;
+            position:absolute;
+            right:5px;
+
+			> ul {
+				list-style-type: none;
+				float: left;
+				padding-left: 5px;
+                
+
+				> li {
+					width: auto;
+					float: left;
+					margin-right: 2px;
+					list-style-type: none;
+				}
+			}
+		}
+	}
+
+	.modal-body {
+        float:left; //fix firefox overflow
+		padding: 5px;
+		padding-bottom: 10px;
+
+		.form-group {
+			margin-bottom: 5px;
+			float: left;
+			clear: both;
+			width: 100%;
+			/*div.col-md-8 select, div.col-md-8 input[type='text'] {
+				width: 100%;
+				padding: 2px 5px;
+			}*/
+		}
+	}
+
+	.validationIcon {
+		width: 30px;
+		height: 30px;
+		color: white;
+		background: red;
+		border-radius: 50%;
+		display: inline-block;
+		margin-right: 4px;
+		margin-top: 4px;
+		font-size: 20px;
+		line-height: 30px;
+		text-align: center;
+	}
+
+	ul.errorList {
+		list-style-type: none;
+		position: absolute;
+		padding: 3px;
+		background-color: #cedeef;
+		margin: 0;
+		width: 350px;
+		z-index: 1500;
+		left: -225px;
+		top: 40px;
+		border: solid 1px #428bca;
+
+		li {
+			width: 100%;
+			z-index: 1500;
+
+			a {
+				display: block;
+				width: 100%;
+				padding: 5px;
+			}
+
+			a:hover {
+				background-color: #428bca;
+				color: white;
+			}
+		}
+	}
+}
+
+.modal-backdrop.fade,
+.xa-dialog-container.fade {
+	-moz-transition: none;
+	-o-transition: none;
+	-webkit-transition: none;
+	transition: none;
+}
+
+//generate 40 -> 100 height classes
+.generate-heights(100, 20);
+
+.xa-dialog .modal-footer {
+	height: 7px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.xa-dialog .modal-header {
+	height: 47px;
+}
+
+.generate-heights(@n, @i) when (@i =< @n) {
+	//don't get fooled by the name, this is the whole modal container
+	._@{i}pHwin .xa-dialog .modal-content {
+		position: absolute;
+		top: ((100-@i)/2*1%);
+		bottom: ((100-@i)/2*1%);
+		margin: auto;
+	}
+
+	._@{i}pHwin .window-content {//be less specific, to allow overrides (.xa-dialog .modal-content .window ) {
+		position: absolute;
+		top: 47px;
+		bottom: 7px;
+		width: 100%;
+	}
+
+	.generate-heights(@n, (@i + 10));
+}
+
+.modal-body {
+
+	.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+		padding: 1px 2px;
+	}
+
+	.container {
+		padding: 5px;
+		padding-bottom: 0;
+	}
+
+	.container .row {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+
+
+.status-container {
+	position: relative;
+}
+
+.status-bubble {
+	border-radius: 5px;
+	border: solid 1px #808080;
+	display: block;
+	position: absolute;
+	bottom: 0;
+	padding: 1px;
+	left: 50px;
+	font-size: 10px;
+}
+
+.status-create.status-bubble {
+	background-color: #57fe1d;
+}
+
+.status-edit.status-bubble {
+	background-color: #fe8002;
+}
+
+.status-consult.status-bubble {
+	background-color: #84e4ff;
+}
+
+.leftTemplate, .rightTemplate {
+	float: left;
+    padding-top: 2px;
+}
+
+
+.window .window-content {
+    overflow: auto;
+//    overflow-y: scroll;
+}
+
+.window .window-content .container {
+	width: 100%;
+}
+
+.fade.in.backdrop-transparent {
+    opacity:0;
+}
+
+.no-round-corners .window {
+    border-radius: 0;
+}
+
+.no-round-corners .modal-content {
+    box-shadow: none;
+}

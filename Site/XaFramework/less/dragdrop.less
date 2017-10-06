@@ -1,0 +1,31 @@
+﻿.xa-drag-proxy {
+
+	display: inline-block;
+	line-height: 30px;
+	vertical-align: middle;
+	position: absolute;
+	z-index: 99999;
+
+	.xa-drag-clone {
+		opacity: 0.7;
+	}
+
+	.drag-drop-indicator {
+
+		width: 20px;
+		height: 20px;
+		display: inline-block;
+		position: absolute;
+		top: 5px;
+		left: -20px;
+		background-repeat: no-repeat;
+		background-color: transparent;
+	
+		&.valid {
+			background-image: url(../img/ok_icon.png);
+		}
+        &.invalid {
+	    	background-image: url(../img/error_icon.png);
+		}
+	}
+}

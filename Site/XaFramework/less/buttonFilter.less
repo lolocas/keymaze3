@@ -1,0 +1,70 @@
+﻿@import "mixins.less";
+
+.buttonFilterContainer {
+	width: 100%;
+    position:fixed;
+    top:70px;
+    left:0;
+    right:0;
+	padding: 2px;
+    height:30px;
+    background-color: #8c8c8b;
+
+	.xang.xa-form-button {
+		margin-right: 5px;
+		display: block;
+		float: left;
+		line-height: 25px;
+		height: 25px;
+
+		.back {
+			line-height: 21px;
+		}
+	}
+
+	.leftContainer {
+		width: 80%;
+		overflow: hidden;
+	}
+
+	.rightContainer .scrollMask {
+		width: 100px;
+		float: left;
+		overflow-y: hidden;
+		overflow-x: auto;
+		margin-right: 10px;
+		margin-left: 10px;
+		font-size: 2px;
+	}
+
+    .rightContainer a{
+       	display: block;
+		float: right;
+		width: 20px;
+		height: 20px;
+		margin-top: 2px;
+		margin-right: 10px;
+    }
+
+	.rightContainer .delete-icon {
+			background: transparent url(../img/Trashcan.png) no-repeat center center;
+
+		&.xa-drag-over {
+			-moz-transform: scale(1.4);
+			-ms-transform: scale(1.4);
+			-o-transform: scale(1.4);
+			-webkit-transform: scale(1.4);
+			transform: scale(1.4);
+		}
+	}
+
+     .rightContainer .visu-icon {
+		background: transparent url(../img/list.png) no-repeat center center;
+
+	}
+
+    .rightContainer .conf-icon {
+		background: transparent url(../img/parametres24.png) no-repeat center center;
+
+	}
+}

@@ -1,0 +1,205 @@
+.xa-date-picker {
+  position: relative;
+  display: inline-block;
+  margin: -1px;
+}
+.xa-date-picker .form-control {
+  padding-right: 45px;
+  width: 100%;
+}
+.xa-date-picker .form-control::-ms-clear {
+  display: none;
+}
+.xa-date-picker .form-control.has-err {
+  border-color: #dc000c;
+}
+.xa-date-picker .date-picker-buttons {
+  color: #000;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 45px;
+  bottom: 0;
+  padding: 0;
+  line-height: 14px;
+}
+.xa-date-picker .date-picker-buttons .date-picker-button {
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.xa-date-picker .date-picker-buttons .date-picker-button.left {
+  left: 0;
+  width: 15px;
+}
+.xa-date-picker .date-picker-buttons .date-picker-button.right {
+  right: 0;
+}
+.xa-date-picker .date-picker-buttons .date-picker-button .helper {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.xa-date-picker .date-picker-buttons .date-picker-button .up,
+.xa-date-picker .date-picker-buttons .date-picker-button .down {
+  height: 50%;
+  width: 100%;
+  font-size: 10px;
+  vertical-align: middle;
+  text-align: center;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  padding-top: 0;
+}
+.xa-date-picker .date-picker-buttons .date-picker-button .up .glyphicon,
+.xa-date-picker .date-picker-buttons .date-picker-button .down .glyphicon {
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+.xa-date-picker .date-picker-buttons .date-picker-button .up {
+  top: 0;
+}
+.xa-date-picker .date-picker-buttons .date-picker-button .up .glyphicon {
+  left: 0;
+  top: 0;
+  bottom: auto;
+}
+.xa-date-picker .date-picker-buttons .date-picker-button .down {
+  bottom: 0;
+  border-top: 1px solid #ccc;
+}
+.xa-date-picker .date-picker-buttons .date-picker-button .down .glyphicon {
+  left: 0;
+  top: auto;
+  bottom: 3px;
+}
+.xa-date-picker .date-picker-buttons .date-picker-button.toggle {
+  font-size: 120%;
+  width: 30px;
+  padding: 2px 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+.xa-date-picker .date-picker-buttons .date-picker-button.toggle .helper {
+  display: table;
+}
+.xa-date-picker .date-picker-buttons .date-picker-button.toggle i {
+  display: table-cell;
+  vertical-align: middle;
+}
+.xa-date-picker .xa-date-picker-popup {
+  position: absolute;
+  z-index: 1200;
+  box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.5);
+}
+.xa-date-picker .xa-date-picker-popup .date-picker-footer {
+  padding-top: 10px;
+}
+.xa-date-picker .xa-date-picker-popup .date-picker-footer .btn {
+  width: 100%;
+}
+.xa-date-picker .xa-date-picker-popup.left {
+  left: 0;
+}
+.xa-date-picker .xa-date-picker-popup.right {
+  right: 0;
+}
+.xa-date-picker .xa-date-picker-popup.top {
+  bottom: 16px;
+}
+.dtContainer .datepick {
+  z-index: 19999;
+  position: absolute;
+  top: 24px;
+  right: 0;
+}
+.dtContainer .datepick select {
+  width: auto !important;
+  padding: 0 !important;
+}
+body .datepick .datepick-ctrl {
+  display: none;
+}
+body .datepick .datepick-nav,
+body .datepick .datepick-ctrl {
+  background-color: #ffffff;
+}
+body .datepick .datepick-nav a,
+body .datepick .datepick-ctrl a {
+  padding: 5px;
+  font-size: 12px;
+  color: #222;
+  height: inherit;
+}
+body .datepick .datepick-nav a:hover,
+body .datepick .datepick-ctrl a:hover {
+  color: white;
+}
+body .datepick .datepick-month-header {
+  background-color: white;
+  padding: 0;
+  height: inherit;
+}
+body .datepick .datepick-month-header select {
+  height: inherit;
+  background-color: white;
+  color: #222;
+  width: 48%;
+  margin: 0;
+  padding: 3px;
+  border: solid 1px #bbbbbb;
+}
+body .datepick .datepick-month {
+  border: none;
+  width: auto;
+}
+body .datepick .datepick-month td {
+  background-color: #f6f6f6;
+}
+body .datepick .datepick-month table tr th {
+  padding: 7px;
+  background-color: white;
+  color: #666;
+  border: none;
+}
+body .datepick .datepick-month table tr td {
+  padding: 0;
+  border: none;
+}
+body .datepick .datepick-month table tr td .datepick-other-month {
+  background-color: transparent;
+}
+body .datepick .datepick-month table tr td a {
+  -moz-transition: all ease .5s;
+  -o-transition: all ease .5s;
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
+  padding: 5px 10px;
+  background-color: white;
+}
+body .datepick .datepick-month table tr td a.datepick-today {
+  background-color: #abe8ff;
+}
+body .datepick .datepick-month table tr td a.datepick-weekend {
+  background-color: #f6f6f6;
+}
+body .datepick .datepick-month table tr td a:hover,
+body .datepick .datepick-month table tr td a.datepick-selected {
+  background-color: #427FDC;
+  color: white;
+}
+
+.xa-datepicker-tablet {
+  position: relative;
+}

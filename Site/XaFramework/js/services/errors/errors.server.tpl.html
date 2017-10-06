@@ -1,0 +1,13 @@
+﻿<xa-window-default-header icon="XaFramework/img/popup/MsgIconError.png" hidevalidate="true" hideclose="false" dyntitle="error.instance.statusText"></xa-window-default-header>
+<div class="modal-body window-content clearfix">
+        
+    <div class="error-body">
+        <div><span class="field">Request:</span><span>{{error.instance.config.method + ' - ' + error.instance.config.url}}</span></div>
+        <div><span class="field">exceptionMessage:</span><span>{{error.instance.data.ExceptionMessage}}</span></div>
+        <div><span class="field">exceptionType:</span><span>{{error.instance.data.ExceptionType}}</span></div>
+        <div><span class="field">message:</span><span>{{error.instance.data.Message}}</span></div>
+        <div><span class="field">stackTrace:</span><pre>{{error.instance.data.StackTrace}}</pre></div>
+    </div>
+
+</div>
+<xa-window-footer></xa-window-footer>

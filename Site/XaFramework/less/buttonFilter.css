@@ -1,0 +1,57 @@
+.buttonFilterContainer {
+  width: 100%;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  right: 0;
+  padding: 2px;
+  height: 30px;
+  background-color: #8c8c8b;
+}
+.buttonFilterContainer .xang.xa-form-button {
+  margin-right: 5px;
+  display: block;
+  float: left;
+  line-height: 25px;
+  height: 25px;
+}
+.buttonFilterContainer .xang.xa-form-button .back {
+  line-height: 21px;
+}
+.buttonFilterContainer .leftContainer {
+  width: 80%;
+  overflow: hidden;
+}
+.buttonFilterContainer .rightContainer .scrollMask {
+  width: 100px;
+  float: left;
+  overflow-y: hidden;
+  overflow-x: auto;
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 2px;
+}
+.buttonFilterContainer .rightContainer a {
+  display: block;
+  float: right;
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  margin-right: 10px;
+}
+.buttonFilterContainer .rightContainer .delete-icon {
+  background: transparent url(../img/Trashcan.png) no-repeat center center;
+}
+.buttonFilterContainer .rightContainer .delete-icon.xa-drag-over {
+  -moz-transform: scale(1.4);
+  -ms-transform: scale(1.4);
+  -o-transform: scale(1.4);
+  -webkit-transform: scale(1.4);
+  transform: scale(1.4);
+}
+.buttonFilterContainer .rightContainer .visu-icon {
+  background: transparent url(../img/list.png) no-repeat center center;
+}
+.buttonFilterContainer .rightContainer .conf-icon {
+  background: transparent url(../img/parametres24.png) no-repeat center center;
+}

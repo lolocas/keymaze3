@@ -1,0 +1,29 @@
+﻿<div class="xa-searchbox xaInputControl" ng-class="{ focus: (focus || show) && !readonly, 'controlDisabled': !canedit }">
+
+    <xa-search-box-pattern></xa-search-box-pattern>
+
+    <input type="text"
+           xa-search-box-input=""
+           ng-readonly="readonly"
+           ng-style="inputStyle"
+           ng-model="selectedText"
+           class="form-control"
+           ng-disabled="!canedit"
+           autocomplete="off" />
+
+    <div class="searchbox-buttons">
+        <ul>
+        <li class="search-button glyphicon xaHideOnDisable" ng-mousedown="$event.preventDefault(); search(); " ng-if="!readonly"><img test-id="btnRechercher" src="XaFramework/img/search.png" /></li>
+        <li class="custom-button glyphicon xaHideOnDisable" ng-click="clear();"  ng-if="readonly"><img test-id="btnAnnuler" src="XaFramework/img/erase.png" /></li>
+		<li class="custom-button glyphicon" 
+		   tabindex="-1"
+           ng-repeat="action in visibleCustomActions"
+		   ng-mousedown="runAction(action)"><img title="{{:: action.text }}" test-id="{{:: action.testId }}" ng-src="{{:: action.img }}" /></li>
+        </ul>
+    </div>
+
+    <div class="xa-searchbox-messages no-results" ng-show="showNoDataFound">
+        <div>{{::'TXT_SEARCHBOX_NODATA' | tr}}</div>
+    </div>
+
+</div>

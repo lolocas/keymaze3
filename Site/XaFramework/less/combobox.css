@@ -1,0 +1,78 @@
+.xa-combobox {
+  position: relative;
+}
+.xa-combobox .form-control {
+  padding-right: 28px !important;
+  cursor: pointer;
+}
+.xa-combobox .form-control::-ms-clear {
+  display: none;
+}
+.xa-combobox.controlDisabled .form-control {
+  cursor: default;
+}
+.xa-combobox .right-inner-addon i {
+  cursor: pointer;
+  pointer-events: auto;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.xa-combobox .right-inner-addon i:active {
+  color: #808080;
+}
+.xa-combobox .inconsistentComboValue {
+  border-color: red;
+}
+.xa-dropdown-menu {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  z-index: -1;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.xa-dropdown-menu .xa-slick-grid {
+  /*float: left; //raul: fit grid inside container!
+        width: 100%;*/
+  /*height: 210px;*/
+  /*.slick-viewport {
+			overflow-x: hidden !important; // Prevent horizontal scroll in IE10.
+		}*/
+}
+.xa-dropdown-menu .xa-slick-grid .slick-row {
+  /*&.active {
+				background-color: rgb(0, 0, 119);
+				color: white;
+			}*/
+}
+.xa-dropdown-menu .xa-slick-grid .slick-row:hover div {
+  cursor: pointer;
+}
+.xa-dropdown-menu .xa-slick-grid .slick-row.selected {
+  background-color: #d9edf7;
+}
+.xa-dropdown-menu .xa-slick-grid .slick-row.highlighted {
+  background-color: #000077;
+  color: white;
+}
+.xa-dropdown-menu.opened {
+  z-index: 5000;
+  opacity: 1;
+}
+.xa-dropdown-menu.top {
+  /*top: auto;
+        bottom: 34px;*/
+}

@@ -1,0 +1,30 @@
+﻿
+.hamburger(@headerClass, @maxWidth) {
+.@{headerClass} {
+    
+
+     @media(max-width: @maxWidth) {
+
+        .collapseble-header {
+            display: none !important;
+        }
+
+        .collapseble-header.expanded {
+            display: block !important;
+        }
+
+        .toggle-menu {
+            display: block !important;
+        }
+
+        .fixed-header {
+            width: 100%;
+        }
+    }
+    @media (min-width: @maxWidth) {
+        .toggle-menu {
+            display: none !important;
+        }
+    }
+}
+}

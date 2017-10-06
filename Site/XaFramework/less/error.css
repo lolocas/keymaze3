@@ -1,0 +1,27 @@
+.error-body {
+  padding: 10px;
+}
+.error-body > div {
+  padding: 2px 0;
+}
+.error-body .field {
+  font-weight: bold;
+  display: inline-block;
+}
+.error-window .modal-content {
+  background: transparent;
+}
+.error-window .window .modal-header {
+  background: #cedeef url('../img/popup/error_header_gradient.png') repeat-x;
+  /* h1 {
+                color: #ECECEC;
+                -webkit-text-shadow: 1px 1px 3px #000;
+                text-shadow: 1px 1px 3px #000;
+            }*/
+}
+.error-window .window .modal-body {
+  background: #ffffff;
+}
+.error-window .window .modal-footer {
+  background: #cedeef url('../img/popup/error_footer_gradient.png') repeat-x;
+}

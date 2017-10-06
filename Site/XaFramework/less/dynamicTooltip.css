@@ -1,0 +1,10 @@
+html body .popover {
+  z-index: 10000;
+  max-width: none;
+}
+.popover .arrow {
+  display: none !important;
+}
+.popover.bottom {
+  margin-top: 5px !important;
+}

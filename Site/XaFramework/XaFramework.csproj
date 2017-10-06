@@ -1,0 +1,734 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A99BF17D-26E1-48EB-AF30-7FB7681C7E07}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XnNgFramework</RootNamespace>
+    <AssemblyName>XnNgFramework</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="build\tasks\dev.js" />
+    <Content Include="build\tasks\nunit.js" />
+    <Content Include="build\tasks\options\clean.js" />
+    <Content Include="build\tasks\options\concat.js" />
+    <Content Include="build\tasks\options\copy.js" />
+    <Content Include="build\tasks\options\cssmin.js" />
+    <Content Include="build\tasks\options\env.js" />
+    <Content Include="build\tasks\options\html2js.js" />
+    <Content Include="build\tasks\options\karma.js" />
+    <Content Include="build\tasks\options\less.js" />
+    <Content Include="build\tasks\options\ngAnnotate.js" />
+    <Content Include="build\tasks\options\notify.js" />
+    <Content Include="build\tasks\options\react.js" />
+    <Content Include="build\tasks\options\uglify.js" />
+    <Content Include="build\tasks\options\watch.js" />
+    <Content Include="build\tasks\prod.js" />
+    <Content Include="demo\bsWin.html" />
+    <Content Include="demo\combobox.html" />
+    <Content Include="demo\datePicker.react\datePicker.react.css" />
+    <Content Include="demo\datePicker.react\datePicker.react.html" />
+    <Content Include="demo\datePicker.react\datePicker.react.js" />
+    <Content Include="demo\demo.audioRecorder.js" />
+    <Content Include="demo\demo.slider.js" />
+    <Content Include="demo\demo.label.js" />
+    <Content Include="demo\demo.period.js" />
+    <Content Include="demo\demo.keyboard.js" />
+    <Content Include="demo\demo.dragdrop.js" />
+    <Content Include="demo\grid.html" />
+    <Content Include="demo\audioRecorder.html" />
+    <Content Include="demo\slider.html" />
+    <Content Include="demo\label.html" />
+    <Content Include="demo\playground\polymorphism.html" />
+    <Content Include="demo\period.html" />
+    <Content Include="demo\keyboard.html" />
+    <Content Include="demo\dragdrop.html" />
+    <Content Include="demo\sub-controller.htm" />
+    <Content Include="demo\textboxsuggest.html" />
+    <Content Include="demo\demo.textboxsuggest.js" />
+    <Content Include="demo\demo.textbox.js" />
+    <Content Include="demo\demo.searchbox.js" />
+    <Content Include="demo\textbox.html" />
+    <Content Include="demo\searchbox.html" />
+    <Content Include="demo\datePicker.html" />
+    <Content Include="demo\demo.datePicker.js" />
+    <Content Include="demo\demo.combobox.js" />
+    <Content Include="demo\gridSource.js" />
+    <Content Include="demo\modal.html" />
+    <Content Include="demo\windowHeaderTemplate.html" />
+    <Content Include="demo\windowSrc.html" />
+    <Content Include="demo\demo.grid.js" />
+    <Content Include="demo\demo.main.js" />
+    <Content Include="demo\index.html" />
+    <Content Include="demo\windowSrcWithButtons.html" />
+    <Content Include="img\ajax-loader.gif" />
+    <Content Include="img\btn_cancel.png" />
+    <Content Include="img\btn_ok.png" />
+    <Content Include="img\BulleAide.png" />
+    <Content Include="img\calendar.png" />
+    <Content Include="img\collapse.gif" />
+    <Content Include="img\drag-handle.png" />
+    <Content Include="img\error.png" />
+    <Content Include="img\error_icon.png" />
+    <Content Include="img\expand.gif" />
+    <Content Include="img\filterBg.png" />
+    <Content Include="img\header-columns-bg.gif" />
+    <Content Include="img\header-columns-over-bg.gif" />
+    <Content Include="img\imageViewer\Printer32.png" />
+    <Content Include="img\imageViewer\RotateLeft.png" />
+    <Content Include="img\imageViewer\RotateRight.png" />
+    <Content Include="img\imageViewer\ZoomIn.png" />
+    <Content Include="img\imageViewer\ZoomOut.png" />
+    <Content Include="img\imageViewer\ZoomReset.png" />
+    <Content Include="img\mode_creation.png" />
+    <Content Include="img\mode_modif.png" />
+    <Content Include="img\ok_icon.png" />
+    <Content Include="img\parametres24.png" />
+    <Content Include="img\planning\Access.png" />
+    <Content Include="img\planning\add.png" />
+    <Content Include="img\planning\Excel.png" />
+    <Content Include="img\planning\Office.png" />
+    <Content Include="img\planning\Word.png" />
+    <Content Include="img\popup\error_footer_gradient.png" />
+    <Content Include="img\popup\error_header_gradient.png" />
+    <Content Include="img\popup\confirm.png" />
+    <Content Include="img\popup\info.png" />
+    <Content Include="img\popup\MsgIconError.png" />
+    <Content Include="img\popup\MsgIconInfo.png" />
+    <Content Include="img\popup\MsgIconQuestion.png" />
+    <Content Include="img\radio\radio-on.png" />
+    <Content Include="img\radio\radio-off.png" />
+    <Content Include="img\radio\radio-sprite.png" />
+    <Content Include="img\settings-blue.png" />
+    <Content Include="img\sort-asc.gif" />
+    <Content Include="img\sort-desc.gif" />
+    <Content Include="img\Trashcan.png" />
+    <Content Include="img\Trashcan_big.png" />
+    <Content Include="img\Upload.png" />
+    <Content Include="js\audioRecorder\audioRecorder.directive.js" />
+    <Content Include="js\audioRecorder\audioRecorder.tpl.html" />
+    <Content Include="js\audioRecorder\audioRecorder._module_.js" />
+    <Content Include="js\autofocus\autofocus.directive.js" />
+    <Content Include="js\autofocus\autofocus._module_.js" />
+    <Content Include="js\colorPicker\colorPicker.directive.js" />
+    <Content Include="js\colorPicker\colorPicker.popup.tpl.html" />
+    <Content Include="js\colorPicker\colorPicker.tpl.html" />
+    <Content Include="js\colorPicker\colorPicker._module_.js" />
+    <Content Include="js\combobox\combobox.filter.js" />
+    <Content Include="js\combobox\notes.txt" />
+    <Content Include="js\label\labelData.directive.js" />
+    <Content Include="js\numericTextbox\numericTextbox.tpl.html" />
+    <Content Include="js\richtexteditor\richtexteditor.directive.js" />
+    <Content Include="js\richtexteditor\richtexteditor._module_.js" />
+    <Content Include="js\services\dialogs\confirm.tpl.html" />
+    <Content Include="js\services\dialogs\error.tpl.html" />
+    <Content Include="js\services\dialogs\notify.tpl.html" />
+    <Content Include="js\services\dialogs\xaDialogs.js" />
+    <Content Include="js\services\telephony\xaTelephony.js" />
+    <Content Include="js\services\toaster\xaToaster.js" />
+    <Content Include="js\services\toaster\xaToaster.tpl.html" />
+    <Content Include="js\services\xaDirectiveHelper.js" />
+    <Content Include="js\services\xaTouch.js" />
+    <Content Include="js\simpleMenu\accordionMenu.popup.tpl.html" />
+    <Content Include="js\simpleMenu\simpleMenu.popup.tpl.html" />
+    <Content Include="js\slider\slider.directive.js" />
+    <Content Include="js\slider\slider.tpl.html" />
+    <Content Include="js\slider\slider.base.tpl.html" />
+    <Content Include="js\slider\slider._module_.js" />
+    <Content Include="js\gridSlick\slickgrid.columns.collection.js" />
+    <Content Include="js\gridSlick\slickgrid.gridOptions.js" />
+    <Content Include="js\inactivity\inactivity.directive.js" />
+    <Content Include="js\inactivity\inactivity._module_.js" />
+    <Content Include="js\services\eventing\xaEventing.js" />
+    <Content Include="js\services\xaKeyHelper.js" />
+    <Content Include="js\swiper\xaSwiper.js" />
+    <Content Include="js\textbox\password.directive.js" />
+    <Content Include="js\textbox\textbox-withrestore.tpl.html" />
+    <Content Include="js\textbox\textbox.tpl.html" />
+    <Content Include="js\upload\upload.tpl.html" />
+    <Content Include="js\utilities\utilities.autoFit.js" />
+    <Content Include="js\viewers\imageViewer.directive.js" />
+    <Content Include="js\viewers\imageViewer.tpl.html" />
+    <Content Include="js\viewers\_viewers._module_.js" />
+    <Content Include="js\viewers\htmlViewer.directive.js" />
+    <Content Include="js\combobox\combobox.datasource.js" />
+    <Content Include="js\checkbox\checkbox.directive.js" />
+    <Content Include="js\checkbox\checkbox._module_.js" />
+    <Content Include="js\gridSlick\selectColumns.tpl.html" />
+    <Content Include="js\gridSlick\slickgrid.column.editor.js" />
+    <Content Include="js\gridSlick\slickgrid.column.formatter.js" />
+    <Content Include="js\gridSlick\slickgrid.column.mapper.js" />
+    <Content Include="js\gridSlick\slickgrid.dragingHeaders.js" />
+    <Content Include="js\gridSlick\slickgrid.dragingRows.js" />
+    <Content Include="js\gridSlick\slickgrid.group.js" />
+    <Content Include="js\gridSlick\slickgrid.personalisationController.js" />
+    <Content Include="js\gridSlick\slickgrid._module_.js" />
+    <Content Include="js\gridSlick\slickgrid.directive.js" />
+    <Content Include="js\gridSlick\slickgrid.tpl.html" />
+    <Content Include="js\dragDrop\dragdrop._module_.js" />
+    <Content Include="js\dragDrop\dragdrop.target.js" />
+    <Content Include="js\dragDrop\dragdrop.source.js" />
+    <Content Include="js\imageButton\imageButton._module_.js" />
+    <Content Include="js\imageButton\imageButton.directive.js" />
+    <Content Include="js\imageButton\imageButton.tpl.html" />
+    <Content Include="js\imageCheckbox\imageCheckbox.directive.js" />
+    <Content Include="js\imageCheckbox\imageCheckbox.tpl.html" />
+    <Content Include="js\imageCheckbox\imageCheckbox._module_.js" />
+    <Content Include="js\label\label.directive.js" />
+    <Content Include="js\label\label._module_.js" />
+    <Content Include="js\numericTextbox\numericTextbox.directive.js" />
+    <Content Include="js\numericTextbox\numericTextbox._module_.js" />
+    <Content Include="js\phoneNumber\phoneNumber.tpl.html" />
+    <Content Include="js\radio\radio._module_.js" />
+    <Content Include="js\radio\radioList.directive.js" />
+    <Content Include="js\radio\radioList.tpl.html" />
+    <Content Include="js\services\diagnostics\benchmark.js" />
+    <Content Include="js\services\errors\errors.client.tpl.html" />
+    <Content Include="js\services\errors\errors.clients.js" />
+    <Content Include="js\services\errors\errors.controller.js" />
+    <Content Include="js\services\errors\errors.display.js" />
+    <Content Include="js\services\errors\errors.server.js" />
+    <Content Include="js\services\errors\errors.server.tpl.html" />
+    <Content Include="js\services\xaKeyboard.js" />
+    <Content Include="js\simpleMenu\simpleMenu.directive.js" />
+    <Content Include="js\simpleMenu\simpleMenu.tpl.html" />
+    <Content Include="js\simpleMenu\simpleMenu._module_.js" />
+    <Content Include="js\splitter\splitter.directive.js" />
+    <Content Include="js\splitter\splitter._module_.js" />
+    <Content Include="js\phoneNumber\phoneNumber.directive.js" />
+    <Content Include="js\phoneNumber\phoneNumber._module_.js" />
+    <Content Include="js\timePicker\timePicker.tpl.html" />
+    <Content Include="js\timePicker\timePicker._module_.js" />
+    <Content Include="js\timePicker\timePicker.directive.js" />
+    <Content Include="js\widgetContainer\widget.directive.js" />
+    <Content Include="js\widgetContainer\widgetContainer.directive.js" />
+    <Content Include="js\widgetContainer\widget.tpl.html" />
+    <Content Include="js\widgetContainer\widgetContainer.tpl.html" />
+    <Content Include="js\widgetContainer\_widgetContainer._module_.js" />
+    <Content Include="js\window\window.advancedHeader.js" />
+    <Content Include="js\window\window.cache.js" />
+    <Content Include="js\utilities\utilities.string.js" />
+    <Content Include="js\xmlData\xmlData.tpl.html" />
+    <Content Include="js\xmlData\xmlData._module_.js" />
+    <Content Include="js\xmlData\xmlData.directive.js" />
+    <Content Include="less\accordion.min.css">
+      <DependentUpon>accordion.css</DependentUpon>
+    </Content>
+    <Content Include="less\accordionMenu.css">
+      <DependentUpon>accordionMenu.less</DependentUpon>
+    </Content>
+    <Content Include="less\audioRecorder.css">
+      <DependentUpon>audioRecorder.less</DependentUpon>
+    </Content>
+    <Content Include="less\buttonFilter.min.css">
+      <DependentUpon>buttonFilter.css</DependentUpon>
+    </Content>
+    <Content Include="less\buttons.min.css">
+      <DependentUpon>buttons.css</DependentUpon>
+    </Content>
+    <Content Include="less\colorPicker.css">
+      <DependentUpon>colorPicker.less</DependentUpon>
+    </Content>
+    <Content Include="less\datePicker.tablet.css">
+      <DependentUpon>datePicker.tablet.less</DependentUpon>
+    </Content>
+    <Content Include="less\error.min.css">
+      <DependentUpon>error.css</DependentUpon>
+    </Content>
+    <Content Include="less\loading.min.css">
+      <DependentUpon>loading.css</DependentUpon>
+    </Content>
+    <Content Include="less\multiButton.min.css">
+      <DependentUpon>multiButton.css</DependentUpon>
+    </Content>
+    <Content Include="less\period.min.css">
+      <DependentUpon>period.css</DependentUpon>
+    </Content>
+    <Content Include="less\slider.css">
+      <DependentUpon>slider.less</DependentUpon>
+    </Content>
+    <Content Include="less\upload.css">
+      <DependentUpon>upload.less</DependentUpon>
+    </Content>
+    <Content Include="less\validation.min.css">
+      <DependentUpon>validation.css</DependentUpon>
+    </Content>
+    <Content Include="less\widget.css">
+      <DependentUpon>widget.less</DependentUpon>
+    </Content>
+    <Content Include="less\widget.css">
+      <DependentUpon>widget.less</DependentUpon>
+    </Content>
+    <Content Include="less\_heightFit.css">
+      <DependentUpon>_heightFit.less</DependentUpon>
+    </Content>
+    <Content Include="less\xmlData.css">
+      <DependentUpon>xmlData.less</DependentUpon>
+    </Content>
+    <Content Include="less\vignette.css">
+      <DependentUpon>vignette.less</DependentUpon>
+    </Content>
+    <Content Include="less\_forms.css">
+      <DependentUpon>_forms.less</DependentUpon>
+    </Content>
+    <Content Include="less\imageCheckbox.css">
+      <DependentUpon>imageCheckbox.less</DependentUpon>
+    </Content>
+    <Content Include="less\imageViewer.css">
+      <DependentUpon>imageViewer.less</DependentUpon>
+    </Content>
+    <Content Include="less\simpleMenu.css">
+      <DependentUpon>simpleMenu.less</DependentUpon>
+    </Content>
+    <Content Include="scripts\jquery.datepick\jquery.datepick-de.js" />
+    <Content Include="scripts\jquery.datepick\jquery.datepick-fr.js" />
+    <Content Include="scripts\jquery.datepick\jquery.datepick-it.js" />
+    <Content Include="scripts\jquery\jquery-2.1.1.js" />
+    <Content Include="scripts\jquery\jquery.caret.js" />
+    <Content Include="scripts\jquery\jquery.event.drop-2.2.js" />
+    <Content Include="scripts\jquery.datepick\jquery.datepick.css" />
+    <Content Include="scripts\jquery.datepick\jquery.datepick.js" />
+    <Content Include="scripts\jquery.datepick\jquery.plugin.js" />
+    <Content Include="scripts\slick-grid\slick.checkboxselectcolumn.js" />
+    <Content Include="scripts\slick-grid\slick.copyManager.js" />
+    <Content Include="scripts\slick-grid\slick.rowmovemanager.js" />
+    <Content Include="scripts\spectrum\spectrum.css" />
+    <Content Include="scripts\spectrum\spectrum.js" />
+    <Content Include="tests\period\period.service.spec.js" />
+    <Content Include="js\textarea\textarea.directive.js" />
+    <Content Include="js\textarea\textarea.tpl.html" />
+    <Content Include="js\textarea\textarea._module_.js" />
+    <Content Include="less\buttonFilter.css">
+      <DependentUpon>buttonFilter.less</DependentUpon>
+    </Content>
+    <Content Include="less\dragdrop.css">
+      <DependentUpon>dragdrop.less</DependentUpon>
+    </Content>
+    <Content Include="less\dynamicTooltip.css">
+      <DependentUpon>dynamicTooltip.less</DependentUpon>
+    </Content>
+    <Content Include="less\filterBg.png" />
+    <Content Include="img\period\button_off.png" />
+    <Content Include="img\period\button_on_halo.png" />
+    <Content Include="img\period\button_on.png" />
+    <Content Include="img\popup\btn_cancel.png" />
+    <Content Include="img\popup\btn_ok.png" />
+    <Content Include="img\popup\criterias.png" />
+    <Content Include="img\popup\footer_gradient.png" />
+    <Content Include="img\popup\header_gradient.png" />
+    <Content Include="js\accordion\accordion.tpl.html" />
+    <Content Include="js\accordion\accordionGroup.tpl.html" />
+    <Content Include="js\accordion\accordion._module_.js" />
+    <Content Include="js\accordion\accordion.directive.js" />
+    <Content Include="js\buttons\form.button.tpl.html" />
+    <Content Include="js\buttonFilter\buttonFilter.directive.js" />
+    <Content Include="js\buttonFilter\buttonFilter.tpl.html" />
+    <Content Include="js\buttonFilter\buttonFilter._module_.js" />
+    <Content Include="js\combobox\combobox.datasource.builder.js" />
+    <Content Include="js\combobox\combobox.input.js" />
+    <Content Include="js\combobox\xa-combobox.selector.tpl.html" />
+    <Content Include="js\combobox\xa-combobox.tpl.html" />
+    <Content Include="js\searchbox\searchbox.action.js" />
+    <Content Include="js\searchbox\searchbox.input.js" />
+    <Content Include="js\searchbox\searchbox.selector.tpl.html" />
+    <Content Include="js\searchbox\searchbox.selector.js" />
+    <Content Include="js\searchbox\searchbox.pattern.js" />
+    <Content Include="js\searchbox\searchbox.directive.js" />
+    <Content Include="js\searchbox\searchbox.pattern.tpl.html" />
+    <Content Include="js\searchbox\searchbox.tpl.html" />
+    <Content Include="js\searchbox\searchbox._module_.js" />
+    <Content Include="js\datePicker\datePicker.tpl.html" />
+    <Content Include="js\loading\loading.tpl.html" />
+    <Content Include="js\multiButton\multiButton.directive.js" />
+    <Content Include="js\multiButton\multiButton.tpl.html" />
+    <Content Include="js\multiButton\multiButton._module_.js" />
+    <Content Include="js\period\period.selector.tpl.html" />
+    <Content Include="js\period\period.service.js" />
+    <Content Include="js\period\period.tpl.html" />
+    <Content Include="js\services\xaLogging.js" />
+    <Content Include="js\services\_service._module_.js" />
+    <Content Include="js\tab\tab.directive.js" />
+    <Content Include="js\tab\tab.tpl.html" />
+    <Content Include="js\tab\tab._module_.js" />
+    <Content Include="js\tab\tabItem.tpl.html" />
+    <Content Include="js\selection\selection.tpl.html" />
+    <Content Include="js\selection\selection._module_.js" />
+    <Content Include="js\selection\selection.directive.js" />
+    <Content Include="js\buttons\buttons._module_.js" />
+    <Content Include="js\buttons\form.button.directive.js" />
+    <Content Include="js\datePicker\datePicker._module_.js" />
+    <Content Include="js\datePicker\datePicker.directive.js" />
+    <Content Include="js\loading\loading.directive.js" />
+    <Content Include="js\loading\loading._module_.js" />
+    <Content Include="js\period\period.directive.js" />
+    <Content Include="js\period\period.selector.directive.js" />
+    <Content Include="js\period\period._module_.js" />
+    <Content Include="js\textbox\textbox.directive.js" />
+    <Content Include="js\textbox\_textbox._module_.js" />
+    <Content Include="js\combobox\combobox._module_.js" />
+    <Content Include="js\combobox\combobox.directive.js" />
+    <Content Include="js\services\xaTranslation.js" />
+    <Content Include="js\upload\upload.directive.js" />
+    <Content Include="js\upload\upload._module_.js" />
+    <Content Include="js\utilities\utilities.positioner.js" />
+    <Content Include="js\utilities\utilities._module_.js" />
+    <Content Include="js\window\backdrop.tpl.html" />
+    <Content Include="js\window\defaultHeader.tpl.html" />
+    <Content Include="js\window\empty.tpl.html" />
+    <Content Include="js\window\stacked.map.factory.js" />
+    <Content Include="js\window\window.backdrop.directive.js" />
+    <Content Include="js\window\window.defaultHeader.js" />
+    <Content Include="js\window\window.directive.js" />
+    <Content Include="js\window\window.footer.js" />
+    <Content Include="js\window\window.provider.js" />
+    <Content Include="js\window\window.stack.factory.js" />
+    <Content Include="js\window\window.transclude.directive.js" />
+    <Content Include="js\window\_window._module_.js" />
+    <Content Include="less\accordion.css">
+      <DependentUpon>accordion.less</DependentUpon>
+    </Content>
+    <Content Include="less\advancedtextbox.css">
+      <DependentUpon>advancedtextbox.less</DependentUpon>
+    </Content>
+    <Content Include="less\buttons.css">
+      <DependentUpon>buttons.less</DependentUpon>
+    </Content>
+    <Content Include="less\combobox.css">
+      <DependentUpon>combobox.less</DependentUpon>
+    </Content>
+    <Content Include="less\datePicker.css">
+      <DependentUpon>datePicker.less</DependentUpon>
+    </Content>
+    <Content Include="less\error.css">
+      <DependentUpon>error.less</DependentUpon>
+    </Content>
+    <Content Include="less\grid.css">
+      <DependentUpon>grid.less</DependentUpon>
+    </Content>
+    <Content Include="less\ajax-loader.png" />
+    <Content Include="less\grid.min.css">
+      <DependentUpon>grid.less</DependentUpon>
+    </Content>
+    <Content Include="less\multiButton.css">
+      <DependentUpon>multiButton.less</DependentUpon>
+    </Content>
+    <Content Include="less\searchbox.css">
+      <DependentUpon>searchbox.less</DependentUpon>
+    </Content>
+    <Content Include="less\selection.css">
+      <DependentUpon>selection.less</DependentUpon>
+    </Content>
+    <Content Include="less\dialogs.css">
+      <DependentUpon>dialogs.less</DependentUpon>
+    </Content>
+    <Content Include="less\loading.css">
+      <DependentUpon>loading.less</DependentUpon>
+    </Content>
+    <Content Include="less\mixins.css">
+      <DependentUpon>mixins.less</DependentUpon>
+    </Content>
+    <Content Include="less\period.css">
+      <DependentUpon>period.less</DependentUpon>
+    </Content>
+    <Content Include="less\splitter.css">
+      <DependentUpon>splitter.less</DependentUpon>
+    </Content>
+    <Content Include="less\tab.css">
+      <DependentUpon>tab.less</DependentUpon>
+    </Content>
+    <Content Include="less\toaster.css">
+      <DependentUpon>toaster.less</DependentUpon>
+    </Content>
+    <Content Include="less\sort_asc.png" />
+    <Content Include="less\sort_both.png" />
+    <Content Include="less\sort_desc.png" />
+    <Content Include="less\validation.css">
+      <DependentUpon>validation.less</DependentUpon>
+    </Content>
+    <Content Include="less\window.css">
+      <DependentUpon>window.less</DependentUpon>
+    </Content>
+    <Content Include="less\window.min.css">
+      <DependentUpon>window.css</DependentUpon>
+    </Content>
+    <Content Include="less\xaSpeechBox.css">
+      <DependentUpon>xaSpeechBox.less</DependentUpon>
+    </Content>
+    <Content Include="less\_xnng.css">
+      <DependentUpon>_xnng.less</DependentUpon>
+    </Content>
+    <Content Include="scripts\angular\angular-animate.js" />
+    <Content Include="scripts\angular\angular-locale_fr-fr.js" />
+    <Content Include="scripts\angular\angular-sanitize.js" />
+    <Content Include="scripts\angular\angular.js" />
+    <Content Include="less\period.less" />
+    <Content Include="less\_xnng.less" />
+    <Content Include="less\mixins.less" />
+    <Content Include="less\buttons.less" />
+    <Content Include="scripts\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="scripts\bootstrap\css\bootstrap.css.map" />
+    <Content Include="scripts\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="scripts\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="scripts\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="less\advancedtextbox.less" />
+    <Content Include="less\loading.less" />
+    <Content Include="scripts\jquery\jquery.event.drag-2.2.js" />
+    <Content Include="scripts\jquery\jquery.scrollintoview.js" />
+    <Content Include="less\dialogs.less" />
+    <Content Include="less\selection.less" />
+    <Content Include="less\accordion.less" />
+    <Content Include="less\tab.less" />
+    <Content Include="less\validation.less" />
+    <Content Include="less\toaster.less" />
+    <Content Include="less\multiButton.less" />
+    <Content Include="js\combobox\combobox.selector.directive.js" />
+    <Content Include="less\combobox.less" />
+    <Content Include="scripts\key-master\keymaster.js" />
+    <Content Include="scripts\ng-translate\angular-translate-loader-static-files.js" />
+    <Content Include="scripts\ng-translate\angular-translate.js" />
+    <Content Include="scripts\slick-grid\slick-default-theme.css" />
+    <Content Include="scripts\slick-grid\slick.autotooltips.js" />
+    <Content Include="scripts\slick-grid\slick.core.js" />
+    <Content Include="scripts\slick-grid\slick.dataview.js" />
+    <Content Include="scripts\slick-grid\slick.grid.css" />
+    <Content Include="scripts\slick-grid\slick.grid.js" />
+    <Content Include="scripts\slick-grid\slick.groupitemmetadataprovider.js" />
+    <Content Include="scripts\slick-grid\slick.rowselectionmodel.js" />
+    <Content Include="less\_forms.less" />
+    <Content Include="less\vignette.less" />
+    <Content Include="less\xmlData.less" />
+    <Content Include="less\_heightFit.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="js\_app.js" />
+    <Content Include="scripts\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="scripts\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="scripts\bootstrap\css\bootstrap.css" />
+    <Content Include="scripts\bootstrap\css\bootstrap.min.css" />
+    <Content Include="scripts\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="scripts\bootstrap\js\bootstrap.js" />
+    <Content Include="scripts\bootstrap\js\bootstrap.min.js" />
+    <Content Include="scripts\moment\moment-with-langs.js" />
+    <Content Include="scripts\moment\moment-with-langs.min.js" />
+    <Content Include="scripts\moment\moment.js" />
+    <Content Include="scripts\signalr\jquery.signalR-2.1.1.js" />
+    <Content Include="scripts\ui-router\angular-ui-router.js" />
+    <Content Include="scripts\underscore\underscore-min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\datePicker.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\window.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\error.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\grid.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\searchbox.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\buttonFilter.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\dynamicTooltip.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\dragdrop.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\xaSpeechBox.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\grid.css.map">
+      <DependentUpon>grid.css</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\window.css.map">
+      <DependentUpon>window.css</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\splitter.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\simpleMenu.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\imageCheckbox.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="demo\datePicker.react\calendar.jsx" />
+    <Content Include="demo\datePicker.react\datePicker.react.less" />
+    <Content Include="demo\datePicker.react\DayNames.jsx" />
+    <Content Include="demo\datePicker.react\Week.jsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\imageViewer.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="scripts\bootstrap\js\bootstrap.min.js.map">
+      <DependentUpon>bootstrap.min.js</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\slider.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\accordionMenu.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\widget.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\buttons.css.map">
+      <DependentUpon>buttons.css</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\error.css.map">
+      <DependentUpon>error.css</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\loading.css.map">
+      <DependentUpon>loading.css</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\validation.css.map">
+      <DependentUpon>validation.css</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\buttonFilter.css.map">
+      <DependentUpon>buttonFilter.css</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\period.css.map">
+      <DependentUpon>period.css</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\tab.css.map">
+      <DependentUpon>tab.css</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\accordion.css.map">
+      <DependentUpon>accordion.css</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\multiButton.css.map">
+      <DependentUpon>multiButton.css</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\datePicker.tablet.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\colorPicker.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\upload.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\audioRecorder.less" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58356</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:58356/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

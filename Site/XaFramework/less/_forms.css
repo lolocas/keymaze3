@@ -1,0 +1,89 @@
+.has-err.form-control {
+  border-color: #dc000c;
+}
+pre.xaLabelData {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  white-space: pre;
+  font-family: Arial;
+}
+.xaCheckboxControl {
+  display: inline;
+  cursor: pointer;
+}
+.xaCheckboxControl.has-error,
+.XaRadioList.has-error {
+  border: solid 1px #dc000c;
+}
+textarea[readonly].form-control {
+  background: none;
+  /*border: solid 1px transparent;
+    border-bottom: solid 1px #b1c7e1;*/
+  border: solid 1px #b1c7e1 !important;
+  cursor: default;
+  color: black;
+  box-shadow: none;
+}
+input.form-control[type="number"]:disabled,
+input.form-control[type="text"]:disabled,
+textarea.form-control:disabled {
+  background: none;
+  border: solid 1px transparent;
+  border-bottom: solid 1px #b1c7e1;
+  cursor: default;
+  color: black;
+  box-shadow: none;
+}
+input.xa-textboxnumeric:disabled {
+  text-align: right;
+}
+input.xa-textboxnumeric {
+  text-align: right;
+}
+input:disabled::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: transparent;
+}
+input:disabled:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: transparent;
+}
+input:disabled::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: transparent;
+}
+input:disabled:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: transparent;
+}
+textarea.form-control,
+input[type='password'].form-control,
+input[type='text'].form-control,
+input[type='number'].form-control,
+input[type='email'].form-control {
+  padding: 0 6px;
+}
+.xaTextbox {
+  position: relative;
+}
+.xaTextbox .restore {
+  position: absolute;
+  right: 3px;
+  top: 4px;
+}
+.xaInputControl.xaDisabled .xaShowOnDisable {
+  display: block;
+}
+.xaInputControl.xaDisabled .xaHideOnDisable {
+  display: none !important;
+}
+.formDisabled .hideBlockDisabled,
+.formDisabled .xaHideOnDisable,
+.controlDisabled .xaHideOnDisable {
+  display: none !important;
+}
+div.checkbox {
+  margin-bottom: 10px !important;
+}

@@ -1,0 +1,289 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <title>Keymaze</title>
+
+    <link rel="stylesheet" href="XaFramework/scripts/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="XaFramework/scripts/slick-grid/slick.grid.css" />
+    <link rel="stylesheet" href="XaFramework/scripts/slick-grid/slick-default-theme.css" />
+    <link rel="stylesheet" href="XaFramework/scripts/jquery.datepick/jquery.datepick.css" />
+    <link rel="stylesheet" href="XaFramework/less/_forms.css" />
+    <link rel="stylesheet" href="XaFramework/less/_hamburger.css" />
+    <link rel="stylesheet" href="XaFramework/less/_heightFit.css" />
+    <link rel="stylesheet" href="XaFramework/less/_xnng.css" />
+    <link rel="stylesheet" href="XaFramework/less/accordion.css" />
+    <link rel="stylesheet" href="XaFramework/less/accordionMenu.css" />
+    <link rel="stylesheet" href="XaFramework/less/advancedtextbox.css" />
+    <link rel="stylesheet" href="XaFramework/less/buttonFilter.css" />
+    <link rel="stylesheet" href="XaFramework/less/buttons.css" />
+    <link rel="stylesheet" href="XaFramework/less/colorPicker.css" />
+    <link rel="stylesheet" href="XaFramework/less/combobox.css" />
+    <link rel="stylesheet" href="XaFramework/less/datePicker.css" />
+    <link rel="stylesheet" href="XaFramework/less/dialogs.css" />
+    <link rel="stylesheet" href="XaFramework/less/dragdrop.css" />
+    <link rel="stylesheet" href="XaFramework/less/dynamicTooltip.css" />
+    <link rel="stylesheet" href="XaFramework/less/error.css" />
+    <link rel="stylesheet" href="XaFramework/less/grid.css" />
+    <link rel="stylesheet" href="XaFramework/less/imageCheckbox.css" />
+    <link rel="stylesheet" href="XaFramework/less/imageViewer.css" />
+    <link rel="stylesheet" href="XaFramework/less/loading.css" />
+    <link rel="stylesheet" href="XaFramework/less/magnify.css" />
+    <link rel="stylesheet" href="XaFramework/less/mixins.css" />
+    <link rel="stylesheet" href="XaFramework/less/multiButton.css" />
+    <link rel="stylesheet" href="XaFramework/less/searchbox.css" />
+    <link rel="stylesheet" href="XaFramework/less/selection.css" />
+    <link rel="stylesheet" href="XaFramework/less/simpleMenu.css" />
+    <link rel="stylesheet" href="XaFramework/less/slider.css" />
+    <link rel="stylesheet" href="XaFramework/less/splitter.css" />
+    <link rel="stylesheet" href="XaFramework/less/tab.css" />
+    <link rel="stylesheet" href="XaFramework/less/toaster.css" />
+    <link rel="stylesheet" href="XaFramework/less/upload.css" />
+    <link rel="stylesheet" href="XaFramework/less/validation.css" />
+    <link rel="stylesheet" href="XaFramework/less/widget.css" />
+    <link rel="stylesheet" href="XaFramework/less/window.css" />
+    <link rel="stylesheet" href="XaFramework/less/xmlData.css" />
+    <link rel="stylesheet" href="XaCommon/Css/style.css" />
+    <link rel="stylesheet" href="XaCommon/Directive/Period/period.css" />
+    <link rel="stylesheet" href="XaCommon/Directive/VignetteList/VignetteList.css" />
+    <link rel="stylesheet" href="XaCommon/Less/style-advanced.css" />
+    <link rel="stylesheet" href="XaCommon/ViewInternal/UserLogin/UserLoginView.css" />
+
+</head>
+<body>
+    <div>
+        <div ng-if="::false" class="loadingSection">
+            <div class="imageContainer">
+                <img class="center-block" src="data:image/png;base64,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" />
+                <h2 class="center-block text-center">... chargement ...</h2>
+            </div>
+        </div>
+        <xa-toaster-container toaster-options="toasterOptions"></xa-toaster-container>
+        <xa-inactivity options="inactivityOptions"></xa-inactivity>
+        <xa-loading loading-custom-message="customLoadingMessage"></xa-loading>
+        <div ui-view></div>
+    </div>
+
+    <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.js"></script>
+
+    <script type="text/javascript" src="XaFramework/scripts/jquery/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="XaFramework/scripts/positioner/positioner.js"></script>
+    <script type="text/javascript" src="XaFramework/scripts/jquery/jquery.event.drag-2.2.js"></script>
+    <script type="text/javascript" src="XaFramework/scripts/jquery/jquery.event.drop-2.2.js"></script>
+    <script type="text/javascript" src="XaFramework/scripts/jquery/jquery.scrollintoview.js"></script>
+    <script type="text/javascript" src="XaFramework/scripts/jquery/jquery.caret.js"></script>
+    <script type="text/javascript" src="XaFramework/scripts/jquery.datepick/jquery.plugin.js"></script>
+    <script type="text/javascript" src="XaFramework/scripts/jquery.datepick/jquery.datepick.js"></script>
+    <script type="text/javascript" src="XaFramework/scripts/jquery.datepick/jquery.datepick-en.js"></script>
+    <script type="text/javascript" src="XaFramework/scripts/jquery.datepick/jquery.datepick-de.js"></script>
+    <script type="text/javascript" src="XaFramework/scripts/jquery.datepick/jquery.datepick-it.js"></script>
+    <script type="text/javascript" src="XaFramework/scripts/jquery.datepick/jquery.datepick-fr.js"></script>
+    <script type="text/javascript" src="XaFramework/scripts/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="XaFramework/scripts/slick-grid/slick.core.js"></script>
+    <script type="text/javascript" src="XaFramework/scripts/slick-grid/slick.grid.js"></script>
+    <script type="text/javascript" src="XaFramework/scripts/slick-grid/slick.dataview.js"></script>
+    <script type="text/javascript" src="XaFramework/scripts/slick-grid/slick.rowselectionmodel.js"></script>
+    <script type="text/javascript" src="XaFramework/scripts/slick-grid/slick.groupitemmetadataprovider.js"></script>
+    <script type="text/javascript" src="XaFramework/scripts/slick-grid/slick.checkboxselectcolumn.js"></script>
+    <script type="text/javascript" src="XaFramework/scripts/slick-grid/slick.autotooltips.js"></script>
+    <script type="text/javascript" src="XaFramework/scripts/slick-grid/slick.copyManager.js"></script>
+    <script type="text/javascript" src="XaFramework/scripts/slick-grid/slick.rowMoveManager.js"></script>
+    <script type="text/javascript" src="XaFramework/scripts/underscore/underscore-min.js"></script>
+    <script type="text/javascript" src="XaFramework/scripts/moment/moment.js"></script>
+    <script type="text/javascript" src="XaFramework/scripts/key-master/keymaster.js"></script>
+    <script type="text/javascript" src="XaFramework/scripts/angular/angular.js"></script>
+    <script type="text/javascript" src="XaFramework/scripts/angular/angular-sanitize.js"></script>
+    <script type="text/javascript" src="XaFramework/scripts/angular/angular-locale_fr-fr.js"></script>
+    <script type="text/javascript" src="XaFramework/scripts/angular/angular-local-storage.js"></script>
+    <script type="text/javascript" src="XaFramework/scripts/ng-translate/angular-translate.js"></script>
+    <script type="text/javascript" src="XaFramework/scripts/ng-translate/angular-translate-loader-static-files.js"></script>
+    <script type="text/javascript" src="XaFramework/scripts/ui-router/angular-ui-router.js"></script>
+    <script type="text/javascript" src="XaFramework/js/_app.js"></script>
+    <script type="text/javascript" src="XaFramework/js/_templates.js"></script>
+    <script type="text/javascript" src="XaFramework/js/accordion/accordion._module_.js"></script>
+    <script type="text/javascript" src="XaFramework/js/accordion/accordion.collapse.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/accordion/accordion.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/autoHeight/autoheight._module_.js"></script>
+    <script type="text/javascript" src="XaFramework/js/autoHeight/autoheight.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/autofocus/autofocus._module_.js"></script>
+    <script type="text/javascript" src="XaFramework/js/autofocus/autofocus.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/buttonFilter/buttonFilter._module_.js"></script>
+    <script type="text/javascript" src="XaFramework/js/buttonFilter/buttonFilter.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/buttons/button._module_.js"></script>
+    <script type="text/javascript" src="XaFramework/js/buttons/button.advanced.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/buttons/button.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/checkbox/checkbox._module_.js"></script>
+    <script type="text/javascript" src="XaFramework/js/checkbox/checkbox.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/colorPicker/colorPicker._module_.js"></script>
+    <script type="text/javascript" src="XaFramework/js/colorPicker/colorPicker.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/combobox/combobox._module_.js"></script>
+    <script type="text/javascript" src="XaFramework/js/combobox/combobox.datasource.builder.js"></script>
+    <script type="text/javascript" src="XaFramework/js/combobox/combobox.datasource.js"></script>
+    <script type="text/javascript" src="XaFramework/js/combobox/combobox.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/combobox/combobox.filter.js"></script>
+    <script type="text/javascript" src="XaFramework/js/combobox/combobox.input.js"></script>
+    <script type="text/javascript" src="XaFramework/js/combobox/combobox.selector.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/datePicker/datePicker._module_.js"></script>
+    <script type="text/javascript" src="XaFramework/js/datePicker/datePicker.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/dragDrop/dragdrop._module_.js"></script>
+    <script type="text/javascript" src="XaFramework/js/dragDrop/dragdrop.source.js"></script>
+    <script type="text/javascript" src="XaFramework/js/dragDrop/dragdrop.target.js"></script>
+    <script type="text/javascript" src="XaFramework/js/gridSlick/slickgrid._module_.js"></script>
+    <script type="text/javascript" src="XaFramework/js/gridSlick/slickgrid.column.editor.js"></script>
+    <script type="text/javascript" src="XaFramework/js/gridSlick/slickgrid.column.formatter.js"></script>
+    <script type="text/javascript" src="XaFramework/js/gridSlick/slickgrid.column.mapper.js"></script>
+    <script type="text/javascript" src="XaFramework/js/gridSlick/slickgrid.columns.collection.js"></script>
+    <script type="text/javascript" src="XaFramework/js/gridSlick/slickgrid.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/gridSlick/slickgrid.dragingHeaders.js"></script>
+    <script type="text/javascript" src="XaFramework/js/gridSlick/slickgrid.dragingRows.js"></script>
+    <script type="text/javascript" src="XaFramework/js/gridSlick/slickgrid.gridOptions.js"></script>
+    <script type="text/javascript" src="XaFramework/js/gridSlick/slickgrid.group.js"></script>
+    <script type="text/javascript" src="XaFramework/js/imageButton/imageButton._module_.js"></script>
+    <script type="text/javascript" src="XaFramework/js/imageButton/imageButton.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/imageCheckbox/imageCheckbox._module_.js"></script>
+    <script type="text/javascript" src="XaFramework/js/imageCheckbox/imageCheckbox.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/imageServer/imageServer._module_.js"></script>
+    <script type="text/javascript" src="XaFramework/js/imageServer/imageServer.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/inactivity/inactivity._module_.js"></script>
+    <script type="text/javascript" src="XaFramework/js/inactivity/inactivity.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/label/label._module_.js"></script>
+    <script type="text/javascript" src="XaFramework/js/label/label.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/label/labelData.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/label/labelLink.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/loading/loading._module_.js"></script>
+    <script type="text/javascript" src="XaFramework/js/loading/loading.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/multiButton/multiButton._module_.js"></script>
+    <script type="text/javascript" src="XaFramework/js/multiButton/multiButton.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/numericTextbox/numericTextbox._module_.js"></script>
+    <script type="text/javascript" src="XaFramework/js/numericTextbox/numericTextbox.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/phoneNumber/phoneNumber._module_.js"></script>
+    <script type="text/javascript" src="XaFramework/js/phoneNumber/phoneNumber.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/radio/radio._module_.js"></script>
+    <script type="text/javascript" src="XaFramework/js/radio/radioList.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/searchbox/searchbox._module_.js"></script>
+    <script type="text/javascript" src="XaFramework/js/searchbox/searchbox.action.js"></script>
+    <script type="text/javascript" src="XaFramework/js/searchbox/searchbox.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/searchbox/searchbox.input.js"></script>
+    <script type="text/javascript" src="XaFramework/js/searchbox/searchbox.pattern.js"></script>
+    <script type="text/javascript" src="XaFramework/js/searchbox/searchbox.selector.js"></script>
+    <script type="text/javascript" src="XaFramework/js/selection/selection._module_.js"></script>
+    <script type="text/javascript" src="XaFramework/js/selection/selection.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/services/_service._module_.js"></script>
+    <script type="text/javascript" src="XaFramework/js/services/diagnostics/benchmark.js"></script>
+    <script type="text/javascript" src="XaFramework/js/services/dialogs/xaDialogs.js"></script>
+    <script type="text/javascript" src="XaFramework/js/services/errors/errors.clients.js"></script>
+    <script type="text/javascript" src="XaFramework/js/services/errors/errors.controller.js"></script>
+    <script type="text/javascript" src="XaFramework/js/services/errors/errors.display.js"></script>
+    <script type="text/javascript" src="XaFramework/js/services/errors/errors.server.js"></script>
+    <script type="text/javascript" src="XaFramework/js/services/eventing/xaEventing.js"></script>
+    <script type="text/javascript" src="XaFramework/js/services/telephony/xaTelephony.js"></script>
+    <script type="text/javascript" src="XaFramework/js/services/toaster/xaToaster.js"></script>
+    <script type="text/javascript" src="XaFramework/js/services/xaDirectiveHelper.js"></script>
+    <script type="text/javascript" src="XaFramework/js/services/xaFrameworkSetting.js"></script>
+    <script type="text/javascript" src="XaFramework/js/services/xaKeyHelper.js"></script>
+    <script type="text/javascript" src="XaFramework/js/services/xaKeyboard.js"></script>
+    <script type="text/javascript" src="XaFramework/js/services/xaLogging.js"></script>
+    <script type="text/javascript" src="XaFramework/js/services/xaPeriodService.js"></script>
+    <script type="text/javascript" src="XaFramework/js/services/xaTouch.js"></script>
+    <script type="text/javascript" src="XaFramework/js/services/xaTranslation.js"></script>
+    <script type="text/javascript" src="XaFramework/js/simpleMenu/simpleMenu._module_.js"></script>
+    <script type="text/javascript" src="XaFramework/js/simpleMenu/simpleMenu.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/slider/slider._module_.js"></script>
+    <script type="text/javascript" src="XaFramework/js/slider/slider.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/splitter/splitter._module_.js"></script>
+    <script type="text/javascript" src="XaFramework/js/splitter/splitter.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/swiper/xaSwiper.js"></script>
+    <script type="text/javascript" src="XaFramework/js/tab/tab._module_.js"></script>
+    <script type="text/javascript" src="XaFramework/js/tab/tab.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/textarea/textarea._module_.js"></script>
+    <script type="text/javascript" src="XaFramework/js/textarea/textarea.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/textbox/_textbox._module_.js"></script>
+    <script type="text/javascript" src="XaFramework/js/textbox/password.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/textbox/textbox-advanced.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/textbox/textbox.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/timePicker/timePicker._module_.js"></script>
+    <script type="text/javascript" src="XaFramework/js/timePicker/timePicker.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/upload/upload._module_.js"></script>
+    <script type="text/javascript" src="XaFramework/js/upload/upload.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/utilities/utilities._module_.js"></script>
+    <script type="text/javascript" src="XaFramework/js/utilities/utilities.positioner.js"></script>
+    <script type="text/javascript" src="XaFramework/js/utilities/utilities.string.js"></script>
+    <script type="text/javascript" src="XaFramework/js/viewers/_viewers._module_.js"></script>
+    <script type="text/javascript" src="XaFramework/js/viewers/htmlViewer.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/viewers/imageViewer.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/viewers/viewers._module_.js"></script>
+    <script type="text/javascript" src="XaFramework/js/widgetContainer/_widgetContainer._module_.js"></script>
+    <script type="text/javascript" src="XaFramework/js/widgetContainer/widget.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/widgetContainer/widgetContainer.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/window/_window._module_.js"></script>
+    <script type="text/javascript" src="XaFramework/js/window/stacked.map.factory.js"></script>
+    <script type="text/javascript" src="XaFramework/js/window/window.advancedHeader.js"></script>
+    <script type="text/javascript" src="XaFramework/js/window/window.backdrop.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/window/window.cache.js"></script>
+    <script type="text/javascript" src="XaFramework/js/window/window.defaultHeader.js"></script>
+    <script type="text/javascript" src="XaFramework/js/window/window.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/window/window.footer.js"></script>
+    <script type="text/javascript" src="XaFramework/js/window/window.provider.js"></script>
+    <script type="text/javascript" src="XaFramework/js/window/window.stack.factory.js"></script>
+    <script type="text/javascript" src="XaFramework/js/window/window.transclude.directive.js"></script>
+    <script type="text/javascript" src="XaFramework/js/xmlData/xmlData._module_.js"></script>
+    <script type="text/javascript" src="XaFramework/js/xmlData/xmlData.directive.js"></script>
+    <script type="text/javascript" src="XaCommon/XaCommon.js"></script>
+    <script type="text/javascript" src="XaCommon/Filter/Global.js"></script>
+    <script type="text/javascript" src="XaCommon/Helper/ApiHelper.js"></script>
+    <script type="text/javascript" src="XaCommon/Helper/ArrayHelper.js"></script>
+    <script type="text/javascript" src="XaCommon/Helper/CacheHelper.js"></script>
+    <script type="text/javascript" src="XaCommon/Helper/DialogHelper.js"></script>
+    <script type="text/javascript" src="XaCommon/Helper/FilterHelper.js"></script>
+    <script type="text/javascript" src="XaCommon/Helper/FormHelper.js"></script>
+    <script type="text/javascript" src="XaCommon/Helper/GridHelper.js"></script>
+    <script type="text/javascript" src="XaCommon/Helper/Helper.js"></script>
+    <script type="text/javascript" src="XaCommon/Helper/KeyboardHelper.js"></script>
+    <script type="text/javascript" src="XaCommon/Helper/LocalHelper.js"></script>
+    <script type="text/javascript" src="XaCommon/Helper/PushHelper.js"></script>
+    <script type="text/javascript" src="XaCommon/Helper/SearchboxHelper.js"></script>
+    <script type="text/javascript" src="XaCommon/Helper/TdbHelper.js"></script>
+    <script type="text/javascript" src="XaCommon/Helper/ToastHelper.js"></script>
+    <script type="text/javascript" src="XaCommon/Helper/UrlHelper.js"></script>
+    <script type="text/javascript" src="XaCommon/Helper/UserHelper.js"></script>
+    <script type="text/javascript" src="XaCommon/Helper/UtilsHelper.js"></script>
+    <script type="text/javascript" src="XaCommon/Manager/ComboBox/ComboBoxManager.js"></script>
+    <script type="text/javascript" src="XaCommon/Manager/SearchBox/SearchBoxExamenManager.js"></script>
+    <script type="text/javascript" src="XaCommon/Manager/SearchBox/SearchBoxOrganManager.js"></script>
+    <script type="text/javascript" src="XaCommon/Manager/SearchBox/SearchBoxPatientManager.js"></script>
+    <script type="text/javascript" src="XaCommon/Manager/SearchBox/SearchBoxPersonnelManager.js"></script>
+    <script type="text/javascript" src="XaCommon/Manager/SearchBox/SearchBoxPrescManager.js"></script>
+    <script type="text/javascript" src="XaCommon/Manager/SearchBox/SearchBoxProduitManager.js"></script>
+    <script type="text/javascript" src="XaCommon/Manager/Suggestion/SuggestionVilleManager.js"></script>
+    <script type="text/javascript" src="XaCommon/Manager/Tdb/TdbManager.js"></script>
+    <script type="text/javascript" src="XaCommon/Manager/Tdb/TdbManagerBase.js"></script>
+    <script type="text/javascript" src="XaCommon/Manager/Tdb/TdbModel.js"></script>
+    <script type="text/javascript" src="XaCommon/Model/FormParamModel.js"></script>
+    <script type="text/javascript" src="XaCommon/Model/GridModel.js"></script>
+    <script type="text/javascript" src="XaCommon/Model/ImpressionsTo.js"></script>
+    <script type="text/javascript" src="XaCommon/Model/QuickFilterModel.js"></script>
+    <script type="text/javascript" src="XaCommon/Model/ResultTo.js"></script>
+    <script type="text/javascript" src="XaCommon/Model/SearchboxTo.js"></script>
+    <script type="text/javascript" src="XaCommon/Model/SplitterModel.js"></script>
+    <script type="text/javascript" src="XaCommon/Model/UploadModel.js"></script>
+    <script type="text/javascript" src="XaCommon/Service/LocalService.js"></script>
+    <script type="text/javascript" src="XaCommon/Service/ParametersService.js"></script>
+    <script type="text/javascript" src="XaCommon/Service/ProfilerService.js"></script>
+    <script type="text/javascript" src="XaCommon/Service/UserService.js"></script>
+    <script type="text/javascript" src="XaCommon/Service/PushServerService.js"></script>
+    <script type="text/javascript" src="XaCommon/Service/ExportGridService/ExportGridTo.js"></script>
+    <script type="text/javascript" src="XaCommon/Service/ExportGridService/ExportGridService.js"></script>
+    <script type="text/javascript" src="XaCommon/Service/ViewerService.js"></script>
+    <script type="text/javascript" src="XaCommon/ViewInternal/UserLogin/UserLogin-Controller.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="KeymazeHelper.js"></script>
+    <script type="text/javascript" src="View/MainPage/MainPage-Controller.js"></script>
+    <script type="text/javascript" src="View/Performance/Performance-Controller.js"></script>
+    <script>angular.element(document).ready(function () { angular.bootstrap(document, ['Keymaze']); });</script>
+</body>
+</html>

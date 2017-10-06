@@ -1,0 +1,547 @@
+.tooltipWindow .window {
+  border: solid 3px #cccccc;
+}
+.xa-dialog-container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1100;
+}
+.xa-dialog-container .xa-dialog {
+  margin: 0 auto;
+}
+.xa-dialog-container .xa-dialog .modal-content {
+  border: none;
+  position: relative;
+}
+.xa-dialog-container .xa-dialog .dialog-body {
+  font-size: 16px;
+  padding: 16px;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+}
+.dialogs.dialogs-notify .window {
+  background-color: #dae8f4;
+}
+.dialogs.dialogs-notify .window .modal-header {
+  background: #d5ebfb;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #d5ebfb 0%, #ebf1f6 50%, #d6ebf4 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #d5ebfb), color-stop(50%, #ebf1f6), color-stop(100%, #d6ebf4));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #d5ebfb 0%, #ebf1f6 50%, #d6ebf4 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #d5ebfb 0%, #ebf1f6 50%, #d6ebf4 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #d5ebfb 0%, #ebf1f6 50%, #d6ebf4 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #d5ebfb 0%, #ebf1f6 50%, #d6ebf4 100%);
+  /* W3C */
+}
+.dialogs.dialogs-notify .window .modal-body {
+  background-color: #ebf1f6;
+}
+.dialogs.dialogs-notify .window .modal-footer {
+  background-color: #ebf1f6;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ebf1f6), to(#daecf9));
+  background: -webkit-linear-gradient(top, #ebf1f6, #daecf9);
+  background: -moz-linear-gradient(top, #ebf1f6, #daecf9);
+  background: -ms-linear-gradient(top, #ebf1f6, #daecf9);
+  background: -o-linear-gradient(top, #ebf1f6, #daecf9);
+}
+.dialogs.dialogs-confirm .window {
+  background-color: #ffffff;
+}
+.dialogs.dialogs-confirm .window .modal-header {
+  background: #fdc79b;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #fdc79b 0%, #ffe2cf 50%, #f4d5bc 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fdc79b), color-stop(50%, #ffe2cf), color-stop(100%, #f4d5bc));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #fdc79b 0%, #ffe2cf 50%, #f4d5bc 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #fdc79b 0%, #ffe2cf 50%, #f4d5bc 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #fdc79b 0%, #ffe2cf 50%, #f4d5bc 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #fdc79b 0%, #ffe2cf 50%, #f4d5bc 100%);
+  /* W3C */
+}
+.dialogs.dialogs-confirm .window .modal-body {
+  background-color: #ffe3d1;
+}
+.dialogs.dialogs-confirm .window .modal-footer {
+  background-color: #ffdabf;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffdabf), to(#ffcca3));
+  background: -webkit-linear-gradient(top, #ffdabf, #ffcca3);
+  background: -moz-linear-gradient(top, #ffdabf, #ffcca3);
+  background: -ms-linear-gradient(top, #ffdabf, #ffcca3);
+  background: -o-linear-gradient(top, #ffdabf, #ffcca3);
+}
+.dialogs.dialogs-green .window {
+  background-color: #ffffff;
+}
+.dialogs.dialogs-green .window .modal-header {
+  background: #c9f5a7;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #c9f5a7 0%, #C4FCCA 50%, #C4FCCA 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #c9f5a7), color-stop(50%, #C4FCCA), color-stop(100%, #C4FCCA));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #c9f5a7 0%, #C4FCCA 50%, #C4FCCA 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #c9f5a7 0%, #C4FCCA 50%, #C4FCCA 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #c9f5a7 0%, #C4FCCA 50%, #C4FCCA 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #c9f5a7 0%, #C4FCCA 50%, #C4FCCA 100%);
+  /* W3C */
+}
+.dialogs.dialogs-green .window .modal-body {
+  background-color: #C4FCCA;
+}
+.dialogs.dialogs-green .window .modal-footer {
+  background-color: #C4FCCA;
+  background: -webkit-gradient(linear, left top, left bottom, from(#C4FCCA), to(#c9f5a7));
+  background: -webkit-linear-gradient(top, #C4FCCA, #c9f5a7);
+  background: -moz-linear-gradient(top, #C4FCCA, #c9f5a7);
+  background: -ms-linear-gradient(top, #C4FCCA, #c9f5a7);
+  background: -o-linear-gradient(top, #C4FCCA, #c9f5a7);
+}
+.dialogs.dialogs-error .modal-content {
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: transparent;
+}
+.dialogs.dialogs-error .modal-content .window {
+  background-color: transparent;
+  height: 100%;
+}
+.dialogs.dialogs-error .modal-content .window .modal-header {
+  background: #ff6969;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #ff6969 0%, #ffa5a5 50%, #ff6969 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ff6969), color-stop(50%, #ffa5a5), color-stop(100%, #ff6969));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #ff6969 0%, #ffa5a5 50%, #ff6969 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #ff6969 0%, #ffa5a5 50%, #ff6969 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #ff6969 0%, #ffa5a5 50%, #ff6969 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #ff6969 0%, #ffa5a5 50%, #ff6969 100%);
+  /* W3C */
+  border-radius: 0;
+}
+.dialogs.dialogs-error .modal-content .window .modal-body {
+  background-color: #fff0f0;
+}
+.dialogs.dialogs-error .modal-content .window .modal-footer {
+  background-color: #fff0f0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff0f0), to(#ff6969));
+  background: -webkit-linear-gradient(top, #fff0f0, #ff6969);
+  background: -moz-linear-gradient(top, #fff0f0, #ff6969);
+  background: -ms-linear-gradient(top, #fff0f0, #ff6969);
+  background: -o-linear-gradient(top, #fff0f0, #ff6969);
+}
+.fillHeight .modal-body {
+  position: absolute;
+  top: 47px;
+  bottom: 7px;
+  width: 100%;
+}
+.window {
+  background-color: #cedeef;
+  z-index: 1001;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.window.window-shadow {
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+.window.fullscreen {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+.window.fullscreen .modal-dialog {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+.window.fullscreen .modal-content,
+.window.fullscreen .modal-body {
+  height: 100%;
+  border-radius: 0;
+}
+.window a.big-icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+.window a.small-icon {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin-top: 7px;
+}
+.window .extraAction img {
+  margin-right: 2px;
+  margin-top: 2px;
+}
+.window a.print {
+  background: transparent url('../img/popup/printer.png') no-repeat 1px 2px;
+}
+.window a.back {
+  background: transparent url('../img/popup/btn_next.png') no-repeat 1px 2px;
+}
+.window a.save {
+  background: transparent url('../img/popup/btn_ok.png') no-repeat 1px 2px;
+}
+.window a.cancel {
+  background: transparent url('../img/popup/btn_cancel.png') no-repeat center center;
+}
+.window .modal-header,
+.window .modal-body,
+.window .modal-footer {
+  width: 100%;
+  padding: 2px 12px;
+  background-color: #cedeef;
+}
+.window .modal-footer {
+  position: relative;
+  overflow: hidden;
+  border-top: none;
+  background: transparent url('../img/popup/footer_gradient.png') repeat-x;
+  height: 8px;
+  line-height: 8px;
+  padding: 0;
+  margin-top: 0;
+  padding-top: 10px;
+}
+.window .modal-header {
+  background: #cedeef url('../img/popup/header_gradient.png') repeat-x;
+}
+.window .modal-header .left {
+  float: left;
+  height: 43px;
+}
+.window .modal-header .left .img-logo {
+  width: auto;
+  float: left;
+  margin-right: 10px;
+}
+.window .modal-header .left .winTitle {
+  color: #000000;
+  font-size: 18px;
+  margin-top: 6px;
+  margin-bottom: 2px;
+}
+.window .modal-header .left img {
+  display: block;
+  margin-top: 4px;
+}
+.window .modal-header .center {
+  float: left;
+}
+.window .modal-header .right {
+  float: right;
+  position: absolute;
+  right: 5px;
+}
+.window .modal-header .right > ul {
+  list-style-type: none;
+  float: left;
+  padding-left: 5px;
+}
+.window .modal-header .right > ul > li {
+  width: auto;
+  float: left;
+  margin-right: 2px;
+  list-style-type: none;
+}
+.window .modal-body {
+  float: left;
+  padding: 5px;
+  padding-bottom: 10px;
+}
+.window .modal-body .form-group {
+  margin-bottom: 5px;
+  float: left;
+  clear: both;
+  width: 100%;
+  /*div.col-md-8 select, div.col-md-8 input[type='text'] {
+				width: 100%;
+				padding: 2px 5px;
+			}*/
+}
+.window .validationIcon {
+  width: 30px;
+  height: 30px;
+  color: white;
+  background: red;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 4px;
+  margin-top: 4px;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+}
+.window ul.errorList {
+  list-style-type: none;
+  position: absolute;
+  padding: 3px;
+  background-color: #cedeef;
+  margin: 0;
+  width: 350px;
+  z-index: 1500;
+  left: -225px;
+  top: 40px;
+  border: solid 1px #428bca;
+}
+.window ul.errorList li {
+  width: 100%;
+  z-index: 1500;
+}
+.window ul.errorList li a {
+  display: block;
+  width: 100%;
+  padding: 5px;
+}
+.window ul.errorList li a:hover {
+  background-color: #428bca;
+  color: white;
+}
+.modal-backdrop.fade,
+.xa-dialog-container.fade {
+  -moz-transition: none;
+  -o-transition: none;
+  -webkit-transition: none;
+  transition: none;
+}
+._20pHwin .xa-dialog .modal-content {
+  position: absolute;
+  top: 40%;
+  bottom: 40%;
+  margin: auto;
+}
+._20pHwin .window-content {
+  position: absolute;
+  top: 47px;
+  bottom: 7px;
+  width: 100%;
+}
+._30pHwin .xa-dialog .modal-content {
+  position: absolute;
+  top: 35%;
+  bottom: 35%;
+  margin: auto;
+}
+._30pHwin .window-content {
+  position: absolute;
+  top: 47px;
+  bottom: 7px;
+  width: 100%;
+}
+._40pHwin .xa-dialog .modal-content {
+  position: absolute;
+  top: 30%;
+  bottom: 30%;
+  margin: auto;
+}
+._40pHwin .window-content {
+  position: absolute;
+  top: 47px;
+  bottom: 7px;
+  width: 100%;
+}
+._50pHwin .xa-dialog .modal-content {
+  position: absolute;
+  top: 25%;
+  bottom: 25%;
+  margin: auto;
+}
+._50pHwin .window-content {
+  position: absolute;
+  top: 47px;
+  bottom: 7px;
+  width: 100%;
+}
+._60pHwin .xa-dialog .modal-content {
+  position: absolute;
+  top: 20%;
+  bottom: 20%;
+  margin: auto;
+}
+._60pHwin .window-content {
+  position: absolute;
+  top: 47px;
+  bottom: 7px;
+  width: 100%;
+}
+._70pHwin .xa-dialog .modal-content {
+  position: absolute;
+  top: 15%;
+  bottom: 15%;
+  margin: auto;
+}
+._70pHwin .window-content {
+  position: absolute;
+  top: 47px;
+  bottom: 7px;
+  width: 100%;
+}
+._80pHwin .xa-dialog .modal-content {
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  margin: auto;
+}
+._80pHwin .window-content {
+  position: absolute;
+  top: 47px;
+  bottom: 7px;
+  width: 100%;
+}
+._90pHwin .xa-dialog .modal-content {
+  position: absolute;
+  top: 5%;
+  bottom: 5%;
+  margin: auto;
+}
+._90pHwin .window-content {
+  position: absolute;
+  top: 47px;
+  bottom: 7px;
+  width: 100%;
+}
+._100pHwin .xa-dialog .modal-content {
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  margin: auto;
+}
+._100pHwin .window-content {
+  position: absolute;
+  top: 47px;
+  bottom: 7px;
+  width: 100%;
+}
+.xa-dialog .modal-footer {
+  height: 7px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.xa-dialog .modal-header {
+  height: 47px;
+}
+.modal-body .col-xs-1,
+.modal-body .col-sm-1,
+.modal-body .col-md-1,
+.modal-body .col-lg-1,
+.modal-body .col-xs-2,
+.modal-body .col-sm-2,
+.modal-body .col-md-2,
+.modal-body .col-lg-2,
+.modal-body .col-xs-3,
+.modal-body .col-sm-3,
+.modal-body .col-md-3,
+.modal-body .col-lg-3,
+.modal-body .col-xs-4,
+.modal-body .col-sm-4,
+.modal-body .col-md-4,
+.modal-body .col-lg-4,
+.modal-body .col-xs-5,
+.modal-body .col-sm-5,
+.modal-body .col-md-5,
+.modal-body .col-lg-5,
+.modal-body .col-xs-6,
+.modal-body .col-sm-6,
+.modal-body .col-md-6,
+.modal-body .col-lg-6,
+.modal-body .col-xs-7,
+.modal-body .col-sm-7,
+.modal-body .col-md-7,
+.modal-body .col-lg-7,
+.modal-body .col-xs-8,
+.modal-body .col-sm-8,
+.modal-body .col-md-8,
+.modal-body .col-lg-8,
+.modal-body .col-xs-9,
+.modal-body .col-sm-9,
+.modal-body .col-md-9,
+.modal-body .col-lg-9,
+.modal-body .col-xs-10,
+.modal-body .col-sm-10,
+.modal-body .col-md-10,
+.modal-body .col-lg-10,
+.modal-body .col-xs-11,
+.modal-body .col-sm-11,
+.modal-body .col-md-11,
+.modal-body .col-lg-11,
+.modal-body .col-xs-12,
+.modal-body .col-sm-12,
+.modal-body .col-md-12,
+.modal-body .col-lg-12 {
+  padding: 1px 2px;
+}
+.modal-body .container {
+  padding: 5px;
+  padding-bottom: 0;
+}
+.modal-body .container .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+.status-container {
+  position: relative;
+}
+.status-bubble {
+  border-radius: 5px;
+  border: solid 1px #808080;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  padding: 1px;
+  left: 50px;
+  font-size: 10px;
+}
+.status-create.status-bubble {
+  background-color: #57fe1d;
+}
+.status-edit.status-bubble {
+  background-color: #fe8002;
+}
+.status-consult.status-bubble {
+  background-color: #84e4ff;
+}
+.leftTemplate,
+.rightTemplate {
+  float: left;
+  padding-top: 2px;
+}
+.window .window-content {
+  overflow: auto;
+}
+.window .window-content .container {
+  width: 100%;
+}
+.fade.in.backdrop-transparent {
+  opacity: 0;
+}
+.no-round-corners .window {
+  border-radius: 0;
+}
+.no-round-corners .modal-content {
+  box-shadow: none;
+}

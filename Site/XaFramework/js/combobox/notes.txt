@@ -1,0 +1,35 @@
+combobox.directive: -----------------------------------------------------------------
+
+-> scope.ready (datasource)
+
+	-> build matches datasource (combobox.datasource.builder ?)
+	
+		->	{
+				id: ...
+				label: ...
+				model: ... (string|object)
+				value: ...
+				selected: true|false
+			}
+		
+
+	-> read original selectionText
+		-> set corresponding matches to selected based on initial value
+		-> if mode === 'single'		-> set first match who's $model === selectionText to selected = true
+		-> if mode === 'multiple'	-> split selectionText on separator -> set any $match who's model is in split values to selected = true
+
+
+combobox.datasource.builder: --------------------------------------------------------
+
+
+takes a param 'dataSource' where dataSource can be: array of strings, array of objects (validated with combobox.datasource.validator)
+	-> return an array of all possible matches + the type to be set back 
+
+
+
+
+combobox.datasource.validator: ------------------------------------------------------
+
+validates a 'dataSource'
+	-> when array of string -> check if all items are strings
+	-> when array of objects -> check if all items have the properties described in 'columns'

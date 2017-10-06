@@ -1,0 +1,197 @@
+﻿body .fade,
+body .collapsing,
+body .modal.fade .modal-dialog,
+body .form-control
+ {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+    
+    box-shadow: none;
+}​
+
+body a:focus {
+    text-decoration:none;
+}
+
+.xa-icon {
+
+    display: inline-block;
+
+    &.calendar {
+        width: 30px;
+        height: 30px;
+        background: url(../img/calendar.png) 0 0 no-repeat;
+    }
+      
+    &.ok {
+        width: 38px;
+        height: 38px;
+        background: url(../img/popup/btn_ok.png) 0 0 no-repeat;
+    }
+
+    &.cancel {
+        width: 28px;
+        height: 28px;
+        background: url(../img/popup/btn_cancel.png) 0 0 no-repeat;
+    }
+}
+
+footer div.btn-group, footer button.btn, footer .xang
+{
+    display:block;
+    float:left;
+    margin-left:10px
+}
+
+.modal {
+    overflow-y: auto;
+}
+
+
+
+/* Réduction taille champ input */
+.form-control {
+    height: 30px;
+}
+
+input.form-control {
+    &.focus {
+        border-color: #66afe9;
+        outline: 0;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+    }
+}
+
+div.action-bar-background {
+    position: relative;
+
+    .sel-bg, .sel-bg-hoverable {
+        position: absolute;
+        top: 0;
+        bottom: 0%;
+        left: 0;
+        right: 0%;
+        z-index: 1;
+        opacity: .2;
+        background-color: #fff;
+        border-radius: 5px;
+    }
+
+    .sel-bg-hoverable:hover {
+        opacity:.4
+    }
+}
+
+a.icon.logo {
+    padding-top: 5px;
+    padding-bottom: 0;
+}
+a.icon {
+    div.img {
+        background-color: transparent;
+        width:40px;
+        height:40px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+    }
+}
+
+.xa-slick-grid-header-buttons.gridButtons {
+
+    .icon {
+        //margin-top: 5px;
+
+         > div.img {
+            width:20px;
+            height:20px;
+        }
+    }
+}
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+@media all and (max-width: 1000px) {
+    .hideOnLess1000 { 
+        display:none !important;
+    }
+}
+
+.truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    display: block;
+}
+
+a {
+    border: solid 1px transparent;
+}
+a:focus {
+   border: 1px dotted #666;
+}
+
+html body footer {
+    z-index:1000;
+}
+
+
+
+
+.error-tooltip.tooltip {
+    padding:0;
+    margin-top:2px;
+    z-index:4000; //need to show the tooltip UNDER the combo popup
+}
+.error-tooltip .tooltip-inner {
+    background-color:#dc000c;
+    color:white;
+    font-size:16px;
+}
+.error-tooltip .tooltip-arrow {
+    display:none;
+}
+
+.prc-base {
+    float:left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+
+
+/*Hamburger icon for limited-screen devices*/
+.toggle-menu {
+    display: block;
+    background: transparent url('../Img/menu.png') no-repeat center center;
+    width: 38px;
+    height: 38px;
+    float: right;
+    margin-right: 10px;
+    margin-top: 8px;
+    background-size: contain;
+}
+
+.fixed-header {
+    float: left;
+}
+
+.collapseble-header {
+    overflow-y: visible;
+    padding-bottom: 8px;
+}
+
+    .collapseble-header.expanded .extendedMenuContainer, .collapseble-header.expanded.filled {
+        background-color: rgba(95, 99, 105, 1);
+    }
+

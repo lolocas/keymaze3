@@ -1,0 +1,30 @@
+﻿<div class="imageViewer">
+    <div class="imageList" ng-show="content.length > 1">
+        <ul class="sideList">
+            <li ng-repeat="img in content track by $index">
+                <a ng-class="{active: img == currentImage}" href="javascript:void(0);" ng-click="selectImg(img)">
+                    <img ng-src="{{img.imgUrl || img.imgContent}}" />
+                    <label>{{img.imgName}}</label>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="imageDetails" ng-class="{'fullWidth': content.length == 1}">
+        <div class="mainImgContainer">
+            <img class="center-block" ng-style="imgStyle" ng-src="{{currentImage.imgUrl || currentImage.imgContent}}" />
+        </div>
+        <div class="toolbarContainer">
+            <div class="center-block" style="width:355px">
+                <ul class="toolbar center-block">
+                    <li><a href="javascript:void(0);" class="print" ng-click="print()"></a></li>
+                    <li><a href="javascript:void(0);" class="zoomReset" ng-click="zoom('auto')"></a></li>
+                    <li><a href="javascript:void(0);" class="fullScreen" ng-click="zoom(100,true)"></a></li>
+                    <li><a href="javascript:void(0);" class="zoomIn" ng-click="zoom(10)"></a></li>
+                    <li><a href="javascript:void(0);" class="zoomOut" ng-click="zoom(-10)"></a></li>
+                    <li><a href="javascript:void(0);" class="rotateLeft" ng-click="rotate(-90)"></a></li>
+                    <li style="margin-right:0"><a href="javascript:void(0);" class="rotateRight" ng-click="rotate(90)"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

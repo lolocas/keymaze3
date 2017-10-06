@@ -1,0 +1,62 @@
+.tab-content {
+  border: 1px solid #ddd;
+  border-top: 0;
+  padding: 10px;
+  background-color: white;
+}
+.tabContainer.modern ul.nav-tabs > li {
+  margin: 5px;
+}
+.tabContainer.modern ul.nav-tabs > li a {
+  cursor: pointer;
+}
+.tabContainer ul.childTabs > li {
+  margin: 0;
+}
+.tabContainer ul.childTabs > li > a {
+  padding: 5px 10px;
+}
+.uiTabContent {
+  border: solid 1px #ddd;
+}
+.tabContainer.classic ul.nav {
+  margin-bottom: 0px;
+  margin-top: 8px;
+}
+.tabContainer.classic ul.nav li {
+  margin-right: 1px;
+  padding: 0;
+  margin: 0;
+  height: 28px;
+}
+.tabContainer.classic ul.nav li.active {
+  background-color: white;
+  border-radius: 4px 4px 0 0;
+}
+.tabContainer.classic .tab-content {
+  padding-top: 10px;
+  border: solid 1px #fff;
+  background-color: white;
+}
+.tabContainer.classic .xang.xa-form-button {
+  box-shadow: none;
+  border: none;
+  border-radius: 4px 4px 0 0;
+}
+.tabContainer.classic .xang.xa-form-button:hover {
+  background-color: white;
+}
+.tabContainer.classic .xang.xa-form-button.selected .back {
+  background: white;
+  color: black;
+}
+.tabContainer.classic .xang.xa-form-button .back {
+  padding: 0px 8px;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  background: #b1c7e1;
+  border: none;
+  color: black;
+}
