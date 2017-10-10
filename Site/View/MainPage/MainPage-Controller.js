@@ -19,6 +19,7 @@
                 var formModel = this;
                 this.listePerformances = null;
                 this.listeImport = null;
+                this.currentPerformance = null;
 
                 this.gridPerformances = new GridConfigModel({
                     height: '400px',
@@ -27,6 +28,7 @@
                     selectFirstRowOnStart: true,
                     sortInfo: [{ field: 'k_date_perf', direction: 'desc' }],
                     showGroupPanel: true,
+                    hideDefaultHeaderButtons: true,
                     columnDefs: [
                     new GridColumnModel({ field: 'p_sport', displayName: 'Sport' }),
                     new GridColumnModel({ field: 'l_lieu', displayName: 'Lieu' }),
@@ -35,12 +37,13 @@
                     new GridColumnModel({ field: 'k_temps', displayName: 'Temps', type: 'time' }),
                     new GridColumnModel({ field: 'k_distance', displayName: 'Distance', type: 'distance' }),
                     new GridColumnModel({ field: 'k_vitmoy', displayName: 'Vit.Moy', width: '80px' }),
-                    new GridColumnModel({ field: 'k_vitmax', displayName: 'Vit.Max', width: '80px' })
+                    new GridColumnModel({ field: 'k_vitmax', displayName: 'Vit.Max', width: '80px' }),
+                    new GridColumnModel({ field: 'action', displayName: 'Action' })
                     ]
                 });
 
                 this.gridImport = new GridConfigModel({
-                    height: '300px',
+                    height: '200px',
                     datasource: function () { return formModel.listeImport },
                     uniqueKey: 'k_date_perf',
                     selectFirstRowOnStart: true,
@@ -63,7 +66,7 @@
         .controller('MainPageController', MainPageController);
 
 
-    function MainPageController(HELPER, MainPageFormModel) {
+    function MainPageController(HELPER, MainPageFormModel, KeymazeHelper) {
         var vm = this;
 
         vm.formModel = new MainPageFormModel();
@@ -79,6 +82,8 @@
         getPerformances();
 
         HELPER.Grid.setRowSelectedAction(vm.formModel.gridPerformances, performanceChange);
+        HELPER.Grid.addButtonActionInColumn(vm.formModel.gridPerformances, 'action', 'XaCommon/Img/edit.png', 'TXT_EDITER', _editPerformance);
+        HELPER.Grid.addButtonDeleteInHeader(vm.formModel.gridPerformances, _deletePerformance);
 
         HELPER.Grid.addButtonActionInColumn(vm.formModel.gridImport, 'action', 'XaCommon/Img/add_20px.png', 'TXT_AJOUTER', _ajouterPerformance);
 
@@ -124,12 +129,15 @@
         }
 
         function performanceChange(performance) {
-            performance.colMap = [];
+            if (performance)
+                performance.colMap = [];
             var l_lstPoint = performance.k_gps.split(';');
             var polyline = [];
             var previousLocation = null;
             var colDistance = [];
             var totalDistance = [];
+
+            vm.formModel.currentPerformance = performance;
 
             colDistance.push(0);
             totalDistance.push(0);
@@ -147,7 +155,7 @@
                     (l_strGPS[eTabGPS.eLONG] / 100000),
                     (l_strGPS.count < 3) ? 0 : l_strGPS[eTabGPS.eALT]));
                 if (previousLocation != null) {
-                    colDistance.push(distanceInKmBetweenEarthCoordinates(previousLocation.latitude, previousLocation.longitude, performance.colMap[l_intNumPoint].latitude, performance.colMap[l_intNumPoint].longitude));
+                    colDistance.push(KeymazeHelper.distanceInKmBetweenEarthCoordinates(previousLocation.latitude, previousLocation.longitude, performance.colMap[l_intNumPoint].latitude, performance.colMap[l_intNumPoint].longitude));
                     totalDistance.push(totalDistance[l_intNumPoint - 1] + colDistance[l_intNumPoint]);
                 }
                 previousLocation = performance.colMap[l_intNumPoint];
@@ -181,25 +189,6 @@
             });
         }
 
-        function degreesToRadians(degrees) {
-            return degrees * Math.PI / 180;
-        }
-
-        function distanceInKmBetweenEarthCoordinates(lat1, lon1, lat2, lon2) {
-            var earthRadiusKm = 6371;
-
-            var dLat = degreesToRadians(lat2 - lat1);
-            var dLon = degreesToRadians(lon2 - lon1);
-
-            lat1 = degreesToRadians(lat1);
-            lat2 = degreesToRadians(lat2);
-
-            var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-                    Math.sin(dLon / 2) * Math.sin(dLon / 2) * Math.cos(lat1) * Math.cos(lat2);
-            var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-            return earthRadiusKm * c;
-        }
-
         function openGPX() {
             var input = document.createElement('input');
             input.type = 'file';
@@ -226,12 +215,11 @@
                     $(l_xml).find("trkpt").each(function () {
                         var location = new Microsoft.Maps.Location($(this).attr("lat"), $(this).attr("lon"), $(this).find("ele").text());
                         colMap.push(location);
-                        tempsPerf = $(this).find("time").text();
                         if (datePerf == null)
-                            datePerf = tempsPerf;
+                            datePerf = $(this).find("time").text();
 
                         if (previousLocation != null) {
-                            colDistance.push(distanceInKmBetweenEarthCoordinates(previousLocation.latitude, previousLocation.longitude, location.latitude, location.longitude));
+                            colDistance.push(KeymazeHelper.distanceInKmBetweenEarthCoordinates(previousLocation.latitude, previousLocation.longitude, location.latitude, location.longitude));
                             totalDistance.push(totalDistance[l_intNumPoint - 1] + colDistance[l_intNumPoint]);
                             distance += totalDistance[l_intNumPoint];
                         }
@@ -250,7 +238,7 @@
                     vm.formModel.listeImport = [];
                     vm.formModel.listeImport.push({
                         k_date_perf: new Date(datePerf),
-                        k_temps: (HELPER.Utils.dateDiff(new Date(datePerf), new Date(tempsPerf)).totalSeconds) * 10,
+                        k_temps: l_intNumPoint * 10,
                         k_distance: Math.round(totalDistance[colMap.length - 1] * 1000),
                         k_gps : k_gps
                     })
@@ -262,6 +250,14 @@
             input.click();
         }
 
+        function _editPerformance(row) {
+            HELPER.Form.openWindow('Performance', row, 'EDIT').then(function (result) {
+                if (result.success) {
+                    getPerformances();
+                }
+            });
+        }
+
         function _ajouterPerformance(row) {
             HELPER.Form.openWindow('Performance', row, 'CREATE').then(function (result){
                 if (result.success) {
@@ -270,6 +266,11 @@
             });
         }
 
+        function _deletePerformance(performance) {
+            HELPER.Api.callApiLocal('Local', 'DeletePerformance', performance[0]).then(function (result){
+                getPerformances();
+            });
+        }
     }
  
 })();

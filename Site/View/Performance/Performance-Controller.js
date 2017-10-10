@@ -15,7 +15,7 @@
                 id: 'Performance',
                 templateUrl: 'View/Performance/Performance-View.html',
                 controller: 'PerformanceController as vm',
-                width: '800px', height: '400px', windowMode: 'modal-gray',
+                width: '800px', height: '380px', windowMode: 'modal-gray',
                 resolve: {
                     performanceParam: HELPER.Form.setModalParam(performance),
                     formParam: HELPER.Form.setModalParam(paramForm)
@@ -47,18 +47,6 @@
             this.listeSousLieux = null;
             this.listeTotalSousLieux = null;
             this.listeTypePerformances = null;
-
-
-            HELPER.Api.callApiLocal('Local', 'GetInfoPerformance')
-            .then(function (result) {
-                formModel.listeSports = result.listeSports;
-                HELPER.Grid.refreshGridDisplay(formModel.gridSport);
-                formModel.listeLieux = result.listeLieux;
-                HELPER.Grid.refreshGridDisplay(formModel.gridLieu);
-                formModel.listeTotalSousLieux = result.listeSousLieux;
-                formModel.listeTypePerformances = result.listeTypePerformances;
-
-            });
 
             this.gridSport = new GridConfigModel({
                 height: '300px',
@@ -115,6 +103,26 @@
 
         HELPER.Grid.setRowSelectedAction(vm.formModel.gridLieu, _applySelectionLieu);
 
+        load();
+
+        function load() {
+            HELPER.Api.callApiLocal('Local', 'GetInfoPerformance')
+            .then(function (result) {
+                vm.formModel.listeSports = result.listeSports;
+                HELPER.Grid.refreshGridDisplay(vm.formModel.gridSport);
+                vm.formModel.listeLieux = result.listeLieux;
+                HELPER.Grid.refreshGridDisplay(vm.formModel.gridLieu);
+                vm.formModel.listeTotalSousLieux = result.listeSousLieux;
+                vm.formModel.listeTypePerformances = result.listeTypePerformances;
+                if (vm.formModel.mode == 'EDIT') {
+                    HELPER.Grid.setSelectedItemFromKey(vm.formModel.gridSport, vm.formModel.performance.k_Key_Sport);
+                    HELPER.Grid.setSelectedItemFromKey(vm.formModel.gridLieu, vm.formModel.performance.k_Key_Lieu);
+                    HELPER.Grid.setSelectedItemFromKey(vm.formModel.gridSousLieu, vm.formModel.performance.k_Key_Souslieu);
+                    HELPER.Grid.setSelectedItemFromKey(vm.formModel.gridType, vm.formModel.performance.k_Key_Type);
+                }
+            });
+        }
+
         function closeFn() {
             HELPER.Form.closeFormWithCancel(vm);
         };
@@ -122,23 +130,23 @@
         function validateFn() {
             var selectSport = HELPER.Grid.getSelectedItem(vm.formModel.gridSport);
             if (selectSport)
-                vm.formModel.performance.k_key_sport = selectSport.p_primaire;
+                vm.formModel.performance.k_Key_Sport = selectSport.p_primaire;
 
             var selectLieu = HELPER.Grid.getSelectedItem(vm.formModel.gridLieu);
             if (selectLieu)
-                vm.formModel.performance.k_key_lieu = selectLieu.l_primaire;
+                vm.formModel.performance.k_Key_Lieu = selectLieu.l_primaire;
 
             var selectSousLieu = HELPER.Grid.getSelectedItem(vm.formModel.gridSousLieu);
             if (selectSousLieu)
-                vm.formModel.performance.k_key_souslieu = selectSousLieu.s_primaire;
+                vm.formModel.performance.k_Key_Souslieu = selectSousLieu.s_primaire;
             else
-                vm.formModel.performance.k_key_souslieu = 0;
+                vm.formModel.performance.k_Key_Souslieu = 0;
 
             var selectType = HELPER.Grid.getSelectedItem(vm.formModel.gridType);
             if (selectType)
-                vm.formModel.performance.k_key_type = selectType.t_primaire;
+                vm.formModel.performance.k_Key_Type = selectType.t_primaire;
             else
-                vm.formModel.performance.k_key_type = 0;
+                vm.formModel.performance.k_Key_Type = 0;
 
             if (vm.formModel.performance.k_gps) {
                 var l_objGSP = vm.formModel.performance.k_gps.split(';');
@@ -152,10 +160,15 @@
 
             if (vm.formModel.mode == 'CREATE') {
                 HELPER.Api.callApiLocal('Local', 'InsertPerformance', vm.formModel.performance)
-            .then(function (result) {
-                if (result)
+                .then(function (result) {
                     HELPER.Form.closeFormWithSuccess(vm);
-            });
+                });
+            }
+            else if (vm.formModel.mode == 'EDIT') {
+                HELPER.Api.callApiLocal('Local', 'UpdatePerformance', vm.formModel.performance)
+                .then(function (result) {
+                    HELPER.Form.closeFormWithSuccess(vm);
+                });
             }
         };
 

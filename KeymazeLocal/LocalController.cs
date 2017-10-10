@@ -26,9 +26,19 @@ namespace KeymazeLocal
             return Service.GetInfoPerformance();
         }
         [HttpPost, AllowAnonymous]
-        public bool InsertPerformance(Performance p_objPerformance)
+        public void InsertPerformance(Performance p_objPerformance)
         {
-            return Service.InsertPerformance(p_objPerformance);
+            Service.InsertPerformance(p_objPerformance);
+        }
+        [HttpPost, AllowAnonymous]
+        public void UpdatePerformance(Performance p_objPerformance)
+        {
+            Service.UpdatePerformance(p_objPerformance);
+        }
+        [HttpPost, AllowAnonymous]
+        public void DeletePerformance(Performance p_objPerformance)
+        {
+            Service.DeletePerformance(p_objPerformance.K_primaire);
         } 
     }
 }

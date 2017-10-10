@@ -12,6 +12,7 @@
 
         $translateProvider.translations('FR-fr', {
             TXT_AJOUTER: 'Ajouter',
+            TXT_SUPPRESSION_CONFIRMATION_ADVANCED: 'Confirmez-vous la suppression de(s) élément(s) suivant(s): {0}',
             TXT_DISTANCE: 'Distance',
             TXT_GRID_GROUP_INDICATOR: 'Glisser ici pour regrouper',
             TXT_LIEU: 'Lieu',
@@ -244,7 +245,7 @@
     // This method prevents adding the current time zone information
     // in order for the date to correspond with the Unspecified zone on the server.
     Date.prototype.toISOString = function () {
-        return moment(this).format('YYYY-MM-DDT00:00:00');
+        return moment(this).format('YYYY-MM-DDTHH:mm:ss');
     };
 
     // Disabling debug information prevents angular from attaching scope info do DOM element.

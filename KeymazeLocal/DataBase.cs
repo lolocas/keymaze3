@@ -68,6 +68,20 @@ namespace KeymazeLocal
                 throw;
             }
         }
+
+        public static T ExecuteScalar<T>(string p_strSQLQuery)
+        {
+            try
+            {
+                SQLiteCommand l_objSQLiteCommand = new SQLiteCommand(p_strSQLQuery, m_objSQLiteConnection);
+                return (T)l_objSQLiteCommand.ExecuteScalar();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         public static bool Read()
         {
             try
