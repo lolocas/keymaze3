@@ -48,7 +48,7 @@ namespace KeymazeLocal
                 List<Performance> lstPerformances = new List<Performance>();
 
                 l_strRequete = "SELECT KEYMAZE.K_PRIMAIRE, SPORT.P_SPORT, LIEU.L_LIEU, SOUS_LIEU.S_LIEU,TYPE.T_TYPE, TYPE.T_COULEUR ";
-                l_strRequete += ", KEYMAZE.K_DATE_PERF, KEYMAZE.K_TEMPS, KEYMAZE.K_DISTANCE, KEYMAZE.K_VITMOY, KEYMAZE.K_VITMAX, KEYMAZE.K_COMMENT, KEYMAZE.K_GPS ";
+                l_strRequete += ", KEYMAZE.K_DATE_PERF, KEYMAZE.K_TEMPS, KEYMAZE.K_DISTANCE, KEYMAZE.K_VITMOY, KEYMAZE.K_VITMAX, KEYMAZE.K_COMMENT, KEYMAZE.K_GPS, KEYMAZE.K_URL ";
                 l_strRequete += ",KEYMAZE.K_KEY_SPORT, KEYMAZE.K_KEY_LIEU, KEYMAZE.K_KEY_SOUSLIEU, KEYMAZE.K_KEY_TYPE ";
                 l_strRequete += "FROM (SPORT INNER JOIN (LIEU INNER JOIN (KEYMAZE LEFT JOIN SOUS_LIEU ON KEYMAZE.K_KEY_SOUSLIEU = SOUS_LIEU.S_PRIMAIRE) ON LIEU.L_PRIMAIRE = KEYMAZE.K_KEY_LIEU) ON SPORT.P_PRIMAIRE = KEYMAZE.K_KEY_SPORT) LEFT JOIN TYPE ON KEYMAZE.K_KEY_TYPE = TYPE.T_PRIMAIRE";
 
@@ -70,10 +70,11 @@ namespace KeymazeLocal
                         K_vitmax = DataBase.getDouble(10),
                         K_comment = DataBase.getString(11),
                         K_gps = DataBase.getString(12),
-                        K_Key_Sport = DataBase.getInt(13),
-                        K_Key_Lieu = DataBase.getInt(14),
-                        K_Key_Souslieu = DataBase.getInt(15),
-                        K_Key_Type = (int)DataBase.getDouble(16)
+                        K_url = DataBase.getString(13),
+                        K_Key_Sport = DataBase.getInt(14),
+                        K_Key_Lieu = DataBase.getInt(15),
+                        K_Key_Souslieu = DataBase.getInt(16),
+                        K_Key_Type = (int)DataBase.getDouble(17)
                     }
                     );
                 }
@@ -179,7 +180,7 @@ namespace KeymazeLocal
             String l_strRequete = "";
             try
             {
-                l_strRequete = "INSERT INTO KEYMAZE(K_KEY_SPORT,K_KEY_LIEU,K_KEY_SOUSLIEU,K_KEY_TYPE,K_TEMPS,K_DISTANCE,K_VITMOY,K_VITMAX,K_COMMENT,K_DATE_PERF,K_GPS)";
+                l_strRequete = "INSERT INTO KEYMAZE(K_KEY_SPORT,K_KEY_LIEU,K_KEY_SOUSLIEU,K_KEY_TYPE,K_TEMPS,K_DISTANCE,K_VITMOY,K_VITMAX,K_COMMENT,K_DATE_PERF,K_GPS,K_URL)";
                 l_strRequete += "VALUES(";
                 l_strRequete += performance.K_Key_Sport + ",";
                 l_strRequete += performance.K_Key_Lieu + ",";
@@ -191,7 +192,8 @@ namespace KeymazeLocal
                 l_strRequete += "'" + ((performance.K_vitmax != null) ? performance.K_vitmax.ToString() : "0") + "',";
                 l_strRequete += "'" + ((performance.K_comment != null) ? performance.K_comment.Replace("'", "''") : "") + "',"; //Commentaire
                 l_strRequete += "'" + ((DateTime)performance.K_date_perf).ToString("yyyy-MM-dd HH:mm:ss") + "',";
-                l_strRequete += "'" + performance.K_gps + "')";
+                l_strRequete += "'" + performance.K_gps + "',";
+                l_strRequete += "'" + performance.K_url + "')";
 
                 DataBase.ExecuteNonQuery(l_strRequete);
             }
@@ -236,7 +238,8 @@ namespace KeymazeLocal
                 l_strRequete += (performance.K_vitmax != null) ? "K_VITMAX = '" + performance.K_vitmax + "'," : "";
                 l_strRequete += (!string.IsNullOrEmpty(performance.K_comment)) ? "K_COMMENT = '" + performance.K_comment.Replace("'", "''") + "'," : "";
                 l_strRequete += "K_DATE_PERF = '" + ((DateTime)performance.K_date_perf).ToString("yyyy-MM-dd HH:mm:ss") + "',";
-                l_strRequete += "K_GPS = '" + performance.K_gps + "'";
+                l_strRequete += "K_GPS = '" + performance.K_gps + "',";
+                l_strRequete += "K_URL = '" + performance.K_url + "'";
                 l_strRequete += " WHERE K_PRIMAIRE =" + performance.K_primaire;
 
                 DataBase.ExecuteNonQuery(l_strRequete);
