@@ -15,7 +15,7 @@
                 id: 'Performance',
                 templateUrl: 'View/Performance/Performance-View.html',
                 controller: 'PerformanceController as vm',
-                width: '800px', height: '380px', windowMode: 'modal-gray',
+                width: '800px', height: '400px', windowMode: 'modal-gray',
                 resolve: {
                     performanceParam: HELPER.Form.setModalParam(performance),
                     formParam: HELPER.Form.setModalParam(paramForm)

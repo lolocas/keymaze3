@@ -29,6 +29,7 @@
                     sortInfo: [{ field: 'k_date_perf', direction: 'desc' }],
                     showGroupPanel: true,
                     hideDefaultHeaderButtons: true,
+                    quickSearchFields: ['l_lieu'],
                     columnDefs: [
                     new GridColumnModel({ field: 'p_sport', displayName: 'Sport' }),
                     new GridColumnModel({ field: 'l_lieu', displayName: 'Lieu' }),
@@ -38,6 +39,7 @@
                     new GridColumnModel({ field: 'k_distance', displayName: 'Distance', type: 'distance' }),
                     new GridColumnModel({ field: 'k_vitmoy', displayName: 'Vit.Moy', width: '80px' }),
                     new GridColumnModel({ field: 'k_vitmax', displayName: 'Vit.Max', width: '80px' }),
+                    new GridColumnModel({ field: 'k_url', displayName: 'URL', width: '80px' }),
                     new GridColumnModel({ field: 'action', displayName: 'Action' })
                     ]
                 });
@@ -48,7 +50,7 @@
                     uniqueKey: 'k_date_perf',
                     selectFirstRowOnStart: true,
                     sortInfo: [{ field: 'k_date_perf', direction: 'desc' }],
-                    hideDefaultHeaderButtons : true,
+                    hideDefaultHeaderButtons: true,
                     columnDefs: [
                     new GridColumnModel({ field: 'k_date_perf', displayName: 'Date', type: 'datetime' }),
                     new GridColumnModel({ field: 'k_temps', displayName: 'Temps', type: 'time' }),
@@ -84,8 +86,10 @@
         HELPER.Grid.setRowSelectedAction(vm.formModel.gridPerformances, performanceChange);
         HELPER.Grid.addButtonActionInColumn(vm.formModel.gridPerformances, 'action', 'XaCommon/Img/edit.png', 'TXT_EDITER', _editPerformance);
         HELPER.Grid.addButtonDeleteInHeader(vm.formModel.gridPerformances, _deletePerformance);
+        HELPER.Grid.addFixedTextClickActionInColumn(vm.formModel.gridPerformances, 'k_url', 'TXT_URL', _openURL, _canOpenURL);
 
         HELPER.Grid.addButtonActionInColumn(vm.formModel.gridImport, 'action', 'XaCommon/Img/add_20px.png', 'TXT_AJOUTER', _ajouterPerformance);
+
 
         //var loc1 = new Microsoft.Maps.Location(33.719753, -117.98925);
         //var loc2 = new Microsoft.Maps.Location(33.993065, -117.918015);
@@ -270,6 +274,14 @@
             HELPER.Api.callApiLocal('Local', 'DeletePerformance', performance[0]).then(function (result){
                 getPerformances();
             });
+        }
+
+        function _openURL(row) {
+            HELPER.Utils.openHtmlLinkFromUrl(row.k_url, '_blank');
+        }
+
+        function _canOpenURL(row) {
+            return !HELPER.Utils.isEmpty(row.k_url);
         }
     }
  

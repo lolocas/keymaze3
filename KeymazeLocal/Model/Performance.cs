@@ -38,6 +38,8 @@ namespace KeymazeLocal.Model
         [DataMember]
         public string K_gps { get; set; }
         [DataMember]
+        public string K_url { get; set; }
+        [DataMember]
         public Nullable<int> K_Key_Sport { get; set; }
         [DataMember]
         public Nullable<int> K_Key_Lieu { get; set; }

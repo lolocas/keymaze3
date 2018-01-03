@@ -20,8 +20,10 @@
             TXT_LIGNES: 'Lignes',
             TXT_LIGNE: 'Ligne',
             TXT_MAX: 'Max',
+            TXT_RECHERCHE: 'Recherche',
             TXT_TEMPS: 'Temps',
             TXT_TYPE: 'Type',
+            TXT_URL: 'URL',
             TXT_VITESSEMOY: 'Vit.moy'
         });
 

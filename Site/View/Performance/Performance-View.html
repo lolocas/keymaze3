@@ -4,7 +4,7 @@
 </xa-window-default-header>
 
 <div class="modal-body window-content clearfix">
-    <div class="container form-group">        
+    <div class="container form-group">
         <div class="row">
             <div class="col-xs-3">
                 <xa-slick-grid grid-options="vm.formModel.gridSport" height-offset="0"></xa-slick-grid>
@@ -19,7 +19,7 @@
             <div class="col-xs-3">
                 <div class="row">
                     <xa-text-area style="height: 200px;"
-                                 input-value="vm.formModel.performance.k_comment"></xa-text-area>
+                                  input-value="vm.formModel.performance.k_comment"></xa-text-area>
                 </div>
                 <div class="row">
                     <xa-label class="edl-keepinline" resource-key="TXT_DISTANCE"></xa-label>
@@ -42,6 +42,15 @@
                                  input-value="vm.formModel.performance.k_vitmoy"></xa-text-box>
                 </div>
             </div>
-        </div>        
+        </div>
+        <div class="row">
+            <div class="col-xs-1">
+                <xa-label resource-key="TXT_URL"></xa-label>
+            </div>
+            <div class="col-xs-11">
+                <xa-text-box class="edl-keepinline" style="width: 700px;"
+                             input-value="vm.formModel.performance.k_url"></xa-text-box>
+            </div>
+        </div>
     </div>
 </div>

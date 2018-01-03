@@ -539,7 +539,7 @@
 			value.setClickFunction(clickFn);
 		}
 
-		function addFixedTextClickActionInColumn(grid, columnName, resourceKey, clickFn) {
+		function addFixedTextClickActionInColumn(grid, columnName, resourceKey, clickFn, clickability) {
 			var value = ArrayHelper.findFirstFromProperty(grid.columnDefs.columns, 'field', columnName);
 			if (UtilsHelper.isUndefined(value))
 				throw new Error("Impossible d'associer une action sur une colonne non déclaré : " + columnName);
@@ -547,7 +547,7 @@
 			value.cellFilter = 'XaFilterFixedTextToLink';
 			value.typeArg = resourceKey;
 
-			value.setClickFunction(clickFn);
+			value.setClickFunction(clickFn, clickability);
 		}
 
 		function applyUpdateFromResultOnCollection(gridOptions,listeItems, itemDeleteIds, isRowInDataSourceFn, fromPush) {

@@ -389,7 +389,7 @@
 
 			GridColumnModel.prototype.setClickFunction = function (func, clickability) {
 				this.buttons = this.buttons || [];
-				this.buttons.push({ args: this.typeArg, filter: this.filter || this.cellFilter, click: func });
+				this.buttons.push({ args: this.typeArg, filter: this.filter || this.cellFilter, click: func, visibilityFn: clickability });
 			}
 
 		
